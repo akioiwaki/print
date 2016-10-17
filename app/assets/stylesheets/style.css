@@ -1,0 +1,95 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+ font-family: "ＭＳ Ｐゴシック", Geneva, Arial, Verdana, sans-serif;
+}
+
+body {
+ font-size: 12px;
+ line-height: 18px;
+ color: #333333;
+}
+
+a:link, a:visited, a:active {
+ color: #1a75bb;
+ text-decoration: none;
+ border-bottom: 1px dotted #1a75bb;
+}
+
+a:hover, a:focus {
+ color: #1a75bb;
+ border-bottom: 1px solid #1a75bb;
+}
+
+ul#submenu li a:link, ul#submenu li a:visited, ul#submenu li a:active {
+ color: #1a75bb;
+ text-decoration: none;
+ border-bottom: 0;
+}
+
+
+ul#submenu li a:hover, ul#submenu li a:focus {
+ color: #1a75bb;
+ border-bottom: 1px solid #1a75bb;
+}
+
+div#ssl p, table.item th, table.item td {
+ font-size: 10px;
+ line-height: 14px;
+}
+
+div#des-container h2, h2.smile {
+ color: #1a75bb;
+ font-size: 18px;
+ line-height: 18px;
+}
+
+
+section h3 {
+ font-size: 12px;
+}
+
+.red, .error {
+ color: #cc0000;
+}
+
+.blue {
+ color: #1a75bb;
+}
+
+.small {
+ font-size: 10px;
+ line-height: 14px;
+}
+
+.trcolor1 {
+ background-color: #ffffff;
+}
+
+.trcolor2 {
+ background-color: #f9f9f9;
+}
+
+ul#footer-navi li a:link, ul#footer-navi li a:visited, ul#footer-navi li a:active {
+ text-decoration: none;
+ border-bottom: 0;
+}
+
+ul#footer-navi li a:hover, ul#footer-navi li a:focus {
+ color: #1a75bb;
+ border-bottom: 1px solid #1a75bb;
+}
+
+div#copyright {
+ color: #ffffff;
+}
+
+
+
+/* WebStation */
+
+section h4.web_st {
+ font-size: 16px;
+}

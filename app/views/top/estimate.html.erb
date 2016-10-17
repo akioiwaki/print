@@ -1,0 +1,283 @@
+
+<!-- START MAIN -->
+    <div id="main">
+     <div id="breadcrumb-container">
+      <div id="breadcrumb">
+       <div id="breadcrumb-nav"><a href="https://www.printhakase.com/" title="HOME">HOME</a> &gt; お見積り依頼 </div>
+      </div>
+      <div id="userinfo">
+       
+      </div>
+     </div>
+     <article>
+            <h1 class="title-estimate">お見積り依頼</h1>
+      <p>下記フォームに必要事項を入力し、送信してください。<br>お客さまからいただいたご連絡先が間違っている場合や、システム障害などによりお返事できない場合がごく稀にございます。<br>万が一、資料が届かない場合は、お手数ですが、お電話またはFAXにてその旨をお問い合わせください。</p>
+
+      <section>
+       <h3 class="subtitle">お見積もり依頼フォーム</h3>
+       <p class="red h">（*）は必須項目となります。</p>
+<form action="https://www.printhakase.com/estimate.html" method="post" enctype="multipart/form-data" id="EstimateForm"><input type="hidden" name="_mode" value="conf" />
+<table border="0" cellpadding="0" cellspacing="0" class="form">
+ <tr>
+  <th colspan="2" class="head"><strong>印刷物に関する情報を入力してください</strong></td>
+ </tr>
+ <tr>
+  <th>ご希望の印刷物<span class="red">*</span></th>
+  <td>
+   <p class="radio01"><label for="card"><input type="radio" name="paper1" value="名刺・カード" id="card" checked />名刺・カード</label></p>
+   <p class="radio01"><label for="slip"><input type="radio" name="paper1" value="伝票" id="slip" />伝票</label></p>
+   <p class="radio01"><label for="postcard"><input type="radio" name="paper1" value="ハガキ印刷" id="postcard" />ハガキ印刷</label></p>
+   <p class="radio01"><label for="envelope"><input type="radio" name="paper1" value="封筒" id="envelope" />封筒</label></p>
+   <p class="radio01"><label for="flier"><input type="radio" name="paper1" value="チラシ・フライヤー" id="flier" />チラシ・フライヤー</label></p>
+   <p class="radio01"><label for="poster"><input type="radio" name="paper1" value="ポスター" id="poster" />ポスター</label></p>
+   <p class="radio01"><label for="booklet"><input type="radio" name="paper1" value="会社案内等" id="booklet" />会社案内等</label></p>
+   <p class="radio01"><label for="uniform"><input type="radio" name="paper1" value="ユニフォーム各種" id="uniform" />ユニフォーム各種</label></p>
+   <p class="radio01"><label for="stamp"><input type="radio" name="paper1" value="はんこ" id="stamp" />はんこ</label></p>
+   <p class="radio01"><label for="novelty"><input type="radio" name="paper1" value="ノベルティ関連" id="novelty" />ノベルティ関連</label></p>
+   <p class="radio01"><label for="other"><input type="radio" name="paper1" value="その他印刷" id="other" />その他印刷</label></p><br class="clear">
+   <p class="ex">その他印刷を選択した方は下記にご記入ください。</p>
+   <input type="text" name="paper2" class="long">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>型番</th>
+  <td><input type="text" name="type" class="short"></td>
+ </tr>
+ <tr>
+  <th rowspan="2">刷り色数<span class="red">*</span></th>
+  <td><p>表面：&nbsp;<span class="gray">4色 = フルカラー　0色 = 印刷なし</span></p>
+   <p class="radio02"><label for="4c"><input type="radio" name="color1" value="4色" id="4c" checked />4色</label></p>
+   <p class="radio02"><label for="2c"><input type="radio" name="color1" value="2色" id="2c" />2色</label></p>
+   <p class="radio02"><label for="1c"><input type="radio" name="color1" value="1色" id="1c" />1色</label></p>
+   <p class="radio02"><label for="0c"><input type="radio" name="color1" value="0色" id="0c" />0色</label></p>
+   <p class="radio01"><label for="otherc"><input type="radio" name="color1" value="紙媒体以外" id="otherc" />紙媒体以外</label></p>
+   
+  </td>
+ </tr>
+ <tr>
+  <td><p>裏面：&nbsp;<span class="gray">4色 = フルカラー　0色 = 印刷なし</span>
+   <p class="radio02"><label for="4cb"><input type="radio" name="color2" value="4色" id="4cb" checked />4色</label></p>
+   <p class="radio02"><label for="2cb"><input type="radio" name="color2" value="2色" id="2cb" />2色</label></p>
+   <p class="radio02"><label for="1cb"><input type="radio" name="color2" value="1色" id="1cb" />1色</label></p>
+   <p class="radio02"><label for="0cb"><input type="radio" name="color2" value="0色" id="0cb" />0色</label></p>
+   <p class="radio01"><label for="othercb"><input type="radio" name="color2" value="紙媒体以外" id="othercb" />紙媒体以外</label></p>
+   
+  </td>
+ </tr>
+ <tr>
+  <th>用紙サイズ<span class="red">*</span><br />複数サイズでの見積可</th>
+  <td>
+   <p class="radio01"><label for="cardsize"><input type="checkbox" name="size[]" value="名刺サイズ " id="cardsize" />名刺サイズ</label></p>
+   <p class="radio01"><label for="postcardsize"><input type="checkbox" name="size[]" value="官製はがき " id="postcardsize" />官製はがき</label></p><br class="clear" />
+   <p class="radio02"><label for="A4"><input type="checkbox" name="size[]" value="A4 " id="A4" />A4</label></p>
+   <p class="radio02"><label for="A3"><input type="checkbox" name="size[]" value="A3 " id="A3" />A3</label></p>
+   <p class="radio02"><label for="A2"><input type="checkbox" name="size[]" value="A2 " id="A2" />A2</label></p>
+   <p class="radio02"><label for="A1"><input type="checkbox" name="size[]" value="A1 " id="A1" />A1</label></p><br class="clear">
+   <p class="radio02"><label for="B5"><input type="checkbox" name="size[]" value="B5 " id="B5" />B5</label></p>
+   <p class="radio02"><label for="B4"><input type="checkbox" name="size[]" value="B4 " id="B4" />B4</label></p>
+   <p class="radio02"><label for="B3"><input type="checkbox" name="size[]" value="B3 " id="B3" />B3</label></p>
+   <p class="radio02"><label for="B2"><input type="checkbox" name="size[]" value="B2 " id="B2" />B2</label></p>
+   <p class="radio02"><label for="B1"><input type="checkbox" name="size[]" value="B1 " id="B1" />B1</label></p><br class="clear">
+   <p><label for="specific"><input type="checkbox" name="size[]" value="指定サイズ" id="specific" />指定サイズ</label>
+   <input type="text" name="size1" class="veryshort" /> mm × <input type="text" name="size2" class="veryshort" /> mm<br class="clear">
+   <label for="othersize"><input type="checkbox" name="size[]" value="紙媒体以外 " id="othersize" />紙媒体以外</label>
+   
+  </td>
+ </tr>
+ <tr>
+  <th>必要数<span class="red">*</span></th>
+  <td>
+   <input type="text" name="amount" class="short"><br />記入例）1,000部、1,000枚など
+   
+  </td>
+ </tr>
+ <tr>
+  <th>希望納品日<span class="red">*</span></th>
+  <td>
+   <input type="text" name="deliver" class="short"><br />記入例）2006年01月01日、1週間以内など
+   
+  </td>
+ </tr>
+ <tr>
+  <th>添付ファイル01<br />参考見本資料等</th>
+  <td><input type="file" name="file1" class="middle" /><br>
+  <span class="red">※アップロードするファイルのファイル名は、すべて半角英数字でお願い致します。<br>※一度にアップロードできるのは50MBまでです。（複数個の場合、その合計）</span></td>
+ </tr>
+ <tr>
+  <th>添付ファイル02<br />参考見本資料等</th>
+  <td><input type="file" name="file2" class="middle" /></td>
+ </tr>
+ <tr>
+  <th>添付ファイル03<br />参考見本資料等</th>
+  <td><input type="file" name="file3" class="middle" /></td>
+ </tr>
+ <tr>
+  <th colspan="2" class="head"><strong>お客様情報を入力してください</strong></td>
+ </tr>
+ <tr>
+  <th>お名前<span class="red">*</span></th>
+  <td>
+   <input name="sirname" class="txt1" type="text"> <input name="firstname" class="txt1" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>フリガナ<span class="red">*</span></th>
+  <td>
+   <input name="sirname_kana" class="txt1" type="text"> <input name="firstname_kana" class="txt1" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>会社名・担当部署</th>
+  <td><input name="company" class="txt2" type="text"></td>
+ </tr>
+ <tr>
+  <th>郵便番号<span class="red">*</span></th>
+  <td>
+   <input name="postcode1" class="postcode" type="text">-<input name="postcode2" class="postcode" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>都道府県<span class="red">*</span></th>
+  <td>
+   <select name="prefecture">
+    <option value="">選択してください</option>
+
+    <optgroup label="北海道">
+     <option value="北海道">北海道</option>
+    </optgroup>
+
+    <optgroup label="東北">
+     <option value="青森県">青森県</option>
+     <option value="岩手県">岩手県</option>
+     <option value="宮城県">宮城県</option>
+     <option value="秋田県">秋田県</option>
+     <option value="山形県">山形県</option>
+     <option value="福島県">福島県</option>
+    </optgroup>
+
+    <optgroup label="関東">
+     <option value="東京都">東京都</option>
+     <option value="神奈川県">神奈川県</option>
+     <option value="埼玉県">埼玉県</option>
+     <option value="千葉県">千葉県</option>
+     <option value="茨城県">茨城県</option>
+     <option value="栃木県">栃木県</option>
+     <option value="群馬県">群馬県</option>
+    </optgroup>
+
+    <optgroup label="甲信越">
+     <option value="新潟県">新潟県</option>
+     <option value="長野県">長野県</option>
+     <option value="山梨県">山梨県</option>
+    </optgroup>
+
+    <optgroup label="北陸">
+     <option value="富山県">富山県</option>
+     <option value="石川県">石川県</option>
+     <option value="福井県">福井県</option>
+    </optgroup>
+
+    <optgroup label="東海">
+     <option value="愛知県">愛知県</option>
+     <option value="岐阜県">岐阜県</option>
+     <option value="静岡県">静岡県</option>
+     <option value="三重県">三重県</option>
+    </optgroup>
+
+    <optgroup label="関西">
+     <option value="大阪府">大阪府</option>
+     <option value="兵庫県">兵庫県</option>
+     <option value="京都府">京都府</option>
+     <option value="滋賀県">滋賀県</option>
+     <option value="奈良県">奈良県</option>
+     <option value="和歌山県">和歌山県</option>
+    </optgroup>
+
+    <optgroup label="中国">
+     <option value="鳥取県">鳥取県</option>
+     <option value="島根県">島根県</option>
+     <option value="岡山県">岡山県</option>
+     <option value="広島県">広島県</option>
+     <option value="山口県">山口県</option>
+    </optgroup>
+
+    <optgroup label="四国">
+     <option value="徳島県">徳島県</option>
+     <option value="香川県">香川県</option>
+     <option value="愛媛県">愛媛県</option>
+     <option value="高知県">高知県</option>
+    </optgroup>
+
+    <optgroup label="九州">
+     <option value="福岡県">福岡県</option>
+     <option value="佐賀県">佐賀県</option>
+     <option value="長崎県">長崎県</option>
+     <option value="熊本県">熊本県</option>
+     <option value="大分県">大分県</option>
+     <option value="宮崎県">宮崎県</option>
+     <option value="鹿児島県">鹿児島県</option>
+    </optgroup>
+
+    <optgroup label="沖縄">
+    <option value="沖縄県">沖縄県</option>
+    </optgroup>
+   </select>
+   
+  </td>
+ </tr>
+ <tr>
+  <th>市区町村<span class="red">*</span></th>
+  <td>
+   <input name="city" class="txt2" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>町名・番地<span class="red">*</span></th>
+  <td>
+   <input name="town" class="txt2" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>建物名</th>
+  <td><input name="building" class="txt2" type="text"></td>
+ </tr>
+ <tr>
+  <th>TEL<span class="red">*</span></th>
+  <td>
+   <input name="tel" class="txt1" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>FAX</th>
+  <td><input name="fax" class="txt1" type="text"></td>
+ </tr>
+ <tr>
+  <th>Eメール<span class="red">*</span></th>
+  <td>
+   <input name="email" class="txt2" type="text">
+   
+  </td>
+ </tr>
+ <tr>
+  <th>特記事項・必要事項など</th>
+  <td><textarea name="message" wrap="hard"></textarea></td>
+ </tr>
+</table>
+<div id="button-container"><input type="submit" class="confirm" value="内容確認"></div>
+
+</form>
+
+      </section>
+     </article>
+     <div id="pagetop"> 
+      <a href="#">↑ページの先頭へ戻る</a> 
+     </div>
+    </div>
+<!-- END MAIN -->
