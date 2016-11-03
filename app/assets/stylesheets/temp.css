@@ -1,6 +1,36 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 3.0.0
+build: 1549
+*/
+html{
+    color:#000;background:#FFF;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;padding:0;
+}
+table{
+    border-collapse:collapse;border-spacing:0;
+}
+fieldset,img{ border:0; }
+address,caption,cite,code,dfn,em,strong,th,var{
+    font-style:normal;font-weight:normal;
+}
+li { list-style:none; } caption,th{ text-align:left; }
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;font-weight:normal;
+}
+q:before,q:after{ content:''; }
+abbr,acronym{ border:0;font-variant:normal; }
+sup{ vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+input,textarea,select{ font-family:inherit;font-size:inherit;font-weight:inherit; }
+input,textarea,select{ *font-size:100%; }
+legend{ color:#000; }
+
 *{ 
  padding: 0px;
  margin: 0px;
@@ -66,7 +96,7 @@ header {
  display: block;
  width: 100%;
  height: 140px;
- background :url( /assets/bg-header.png) left top repeat-x;
+ background: url(bg-header.png) left top repeat-x;
 }
 
 div#header-container {
@@ -84,27 +114,26 @@ div#logo a {
  width: 327px;
  height: 88px;
  text-indent: -9999px;
- background: url( /assetslogo.png) left top no-repeat;
+ background: url(logo.png) left top no-repeat;
  border: 0;
 }
 
 div#contact-container {
- padding: 20px ;
+ padding: 20px 0px ;
  text-align: left;
  float: right;
 }
 
 div#tel {
- margin-left: 40px;
  display: block;
  width: 239px;
  height: 48px;
  text-indent: -9999px;
- background: url( /assets/tel.png) left top no-repeat;
+ background: url(tel.png) left top no-repeat;
 }
 
 ul#contact {
- margin-top: 10px;
+ margin-top: 8px;
  list-style-type: none;
 }
 
@@ -121,12 +150,12 @@ ul#contact li a {
 }
 
 ul#contact li#contact a {
-  background: url(/assets/button-contact.png) left top no-repeat;
+  background: url(button-contact.png) left top no-repeat;
 }
 
 ul#contact li#offer a {
  margin-left: 7px;
- background: url(/assets/button-offer.png) left top no-repeat;
+ background: url(button-offer.png) left top no-repeat;
 }
 
 
@@ -135,9 +164,9 @@ ul#contact li#offer a {
 /* サイドバー */
 
 div#leftbar {
- width: 240px;
+ width: 200px;
  height: 100%;
- margin: 0px 50px 25px -40px;
+ margin: 0px 50px 25px 0px;
  overflow: hidden;
  float: left;
 }
@@ -182,7 +211,7 @@ ul#menu li#home a {
  display: block;
  width: 62px;
  height: 16px;
- background: url(/assets/button-home.png) left top no-repeat;
+ background: url(button-home.png) left top no-repeat;
  border: 0;
 }
 
@@ -190,7 +219,7 @@ ul#menu li#submit a {
  display: block;
  width: 200px;
  height: 50px;
- background: url(/assets/button-submit.png) left top no-repeat;
+ background: url(button-submit.png) left top no-repeat;
  border: 0;
 }
 
@@ -198,7 +227,7 @@ ul#menu li#price a {
  display: block;
  width: 200px;
  height: 50px;
- background: url(/assets/button-price.png) left top no-repeat;
+ background: url(button-price.png) left top no-repeat;
  border: 0;
 }
 
@@ -206,7 +235,7 @@ ul#menu li#printing span.printing {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-printing.png) left top no-repeat;
+ background: url(button-printing.png) left top no-repeat;
 }
 
 ul#menu li#printing a.printing {
@@ -220,7 +249,7 @@ ul#menu li#promo span.promo {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-promo.png) left top no-repeat;
+ background: url(button-promo.png) left top no-repeat;
 }
 
 ul#menu li#promo a.promo {
@@ -234,7 +263,7 @@ ul#menu li#guide span.guide {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-guide.png) left top no-repeat;
+ background: url(button-guide.png) left top no-repeat;
 }
 
 ul#menu li#guide a.guide {
@@ -248,7 +277,7 @@ ul#menu li#store span.store {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-store.png) left top no-repeat;
+ background: url(button-store.png) left top no-repeat;
 }
 
 ul#menu li#store a.store {
@@ -262,7 +291,7 @@ ul#menu li#fc span.fc {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-fc.png) left top no-repeat;
+ background: url(button-fc.png) left top no-repeat;
 }
 
 ul#menu li#fc a.fc {
@@ -276,14 +305,14 @@ ul#menu li#admin span.admin {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-admin.png) left top no-repeat;
+ background: url(button-admin.png) left top no-repeat;
 }
 
 ul#menu li#member span.member {
  display: block;
  width: 200px;
  height: 62px;
- background: url(/assets/button-member.png) left top no-repeat;
+ background: url(button-member.png) left top no-repeat;
 }
 
 ul#menu li#admin a.admin, ul#menu li#member a.admin {
@@ -295,12 +324,11 @@ ul#menu li#admin a.admin, ul#menu li#member a.admin {
 
 ul#submenu {
  width: 200px;
- list-style-image: url(/assets/marker.png);
- background: url(/assets/bg-menu.png) left top repeat-y;
+ list-style-image: url(marker.png);
+ background: url(bg-menu.png) left top repeat-y;
 }
 
 ul#submenu li.none {
-
  width: 166px;
  height: 30px;
  font-weight: bold;
@@ -314,14 +342,14 @@ ul#submenu li.none {
 }
 
 ul#submenu li.admin, ul#submenu li.member {
-  list-style-image: url(/assets/marker-admin.png);
+  list-style-image: url(marker-admin.png);
 }
 
 ul#submenu li {
  width: 186px;
  height: 30px;
  line-height: 30px;
- margin: 0px 7px 0px -33px;
+ margin: 0px 7px;
  list-style-position: inside;
  border-bottom: 1px dotted #c8c8c8;
 }
@@ -329,9 +357,9 @@ ul#submenu li {
 ul#submenu li#bottom {
  width: 200px;
  height: 42px;
- margin-left: -40px;
+ margin: 0px;
  padding: 0px 7px;
- background: url(/assets/bg-menu_b.png) left top no-repeat;
+ background: url(bg-menu_b.png) left top no-repeat;
  border: 0;
 }
 
@@ -344,30 +372,15 @@ div#leftbar div#ssl {
  margin-bottom2: 50px;
 }
 
-div#leftbar div#ssl table {
- margin: 0 auto;
- text-align: center;
-}
-
-div#leftbar div#ssl table a:link {
+div#leftbar div#ssl a:link {
  border: 0;
-}
-
-div#ssl {
- text-align: left;
- margin-top: -10px;
-}
-
-div#ssl_image {
- text-align: center;
- margin-left: 40px;
 }
 
 div#ssl p {
  text-align: left;
  margin-top: 5px;
- margin-left: 40px;
 }
+
 
 
 /* メイン */
@@ -458,7 +471,7 @@ section h3.subtitle {
  line-height: 25px;
  margin: 25px 0px 25px;
  padding: 0px 10px 0px 18px;
- background: url(/assets/bg-subtitle.png) left top no-repeat;
+ background: url(bg-subtitle.png) left top no-repeat;
 }
 
 section h4 {
@@ -684,7 +697,7 @@ table.store th, table.store td {
 
 table.store th {
  padding-left: 28px;
- background: url(/assets/marker.png) 3% 50% no-repeat;
+ background: url(marker.png) 3% 50% no-repeat;
 }
 
 table.aff {
@@ -888,7 +901,7 @@ div#button-container input.submit, div#button-container input.confirm {
  text-indent: -9999px;
  border: 0;
  cursor: pointer;
- background: url(/assets/button-send.png) left top no-repeat;
+ background: url(button-send.png) left top no-repeat;
 }
 
 div#button-container input.confirm {
@@ -898,7 +911,7 @@ div#button-container input.confirm {
  text-indent: -9999px;
  border: 0;
  cursor: pointer;
- background: url(/assets/button-confirm.png) left top no-repeat;
+ background: url(button-confirm.png) left top no-repeat;
 }
 
 p.t {
@@ -939,12 +952,12 @@ dl#faq, p.faq {
 dl#faq dt {
  padding-left: 28px;
  margin-bottom: 12px;
- background: url(/assets/img-guide-faq-q.png) left top no-repeat;
+ background: url(img-guide-faq-q.png) left top no-repeat;
 }
 
 dl#faq dd {
  padding-left: 28px;
- background: url(/assets/img-guide-faq-a.png) left top no-repeat;
+ background: url(img-guide-faq-a.png) left top no-repeat;
 }
 
 div#pagetop {
@@ -953,309 +966,309 @@ div#pagetop {
 }
 
 h1.title-printing {
- background: url(/assets/title-printing.png) left top no-repeat;
+ background: url(title-printing.png) left top no-repeat;
 }
 
 h1.title-printing-smile {
- background: url(/assets/title-printing-smile.png) left top no-repeat;
+ background: url(title-printing-smile.png) left top no-repeat;
 }
 
 h1.title-printing-card {
- background: url(/assets/title-printing-card.png) left top no-repeat;
+ background: url(title-printing-card.png) left top no-repeat;
 }
 
 h1.title-printing-slip {
- background: url(/assets/title-printing-slip.png) left top no-repeat;
+ background: url(title-printing-slip.png) left top no-repeat;
 }
 
 h1.title-printing-postcard {
- background: url(/assets/title-printing-postcard.png) left top no-repeat;
+ background: url(title-printing-postcard.png) left top no-repeat;
 }
 
 h1.title-printing-envelope {
- background: url(/assets/title-printing-envelope.png) left top no-repeat;
+ background: url(title-printing-envelope.png) left top no-repeat;
 }
 
 h1.title-printing-flyer {
- background: url(/assets/title-printing-flyer.png) left top no-repeat;
+ background: url(title-printing-flyer.png) left top no-repeat;
 }
 
 h1.title-printing-poster {
- background: url(/assets/title-printing-poster.png) left top no-repeat;
+ background: url(title-printing-poster.png) left top no-repeat;
 }
 
 h1.title-printing-brochure {
- background: url(/assets/title-printing-brochure.png) left top no-repeat;
+ background: url(title-printing-brochure.png) left top no-repeat;
 }
 
 h1.title-printing-uniform {
- background: url(/assets/title-printing-uniform.png) left top no-repeat;
+ background: url(title-printing-uniform.png) left top no-repeat;
 }
 
 h1.title-printing-stamp {
- background: url(/assets/title-printing-stamp.png) left top no-repeat;
+ background: url(title-printing-stamp.png) left top no-repeat;
 }
 
 h1.title-printing-novelty {
- background: url(/assets/title-printing-novelty.png) left top no-repeat;
+ background: url(title-printing-novelty.png) left top no-repeat;
 }
 
 h1.title-printing-telegram {
- background: url(/assets/title-printing-telegram.png) left top no-repeat;
+ background: url(title-printing-telegram.png) left top no-repeat;
 }
 
 h1.title-printing-nenga2012 {
- background: url(/assets/title-printing-nenga2012.png) left top no-repeat;
+ background: url(title-printing-nenga2012.png) left top no-repeat;
 }
 
 h1.title-printing-shochu2012 {
- background: url(/assets/title-printing-shochu2012.png) left top no-repeat;
+ background: url(title-printing-shochu2012.png) left top no-repeat;
 }
 
 h1.title-printing-nenga2013 {
- background: url(/assets/title-printing-nenga2013.png) left top no-repeat;
+ background: url(title-printing-nenga2013.png) left top no-repeat;
 }
 
 h1.title-printing-shochu2013 {
- background: url(/assets/title-printing-shochu2013.png) left top no-repeat;
+ background: url(title-printing-shochu2013.png) left top no-repeat;
 }
 
 h1.title-printing-nenga2014 {
- background: url(/assets/title-printing-nenga2014.png) left top no-repeat;
+ background: url(title-printing-nenga2014.png) left top no-repeat;
 }
 
 h1.title-printing-nenga2015 {
- background: url(/assets/title-printing-nenga2015.png) left top no-repeat;
+ background: url(title-printing-nenga2015.png) left top no-repeat;
 }
 
 
 
 h1.title-promotion {
- background: url(/assets/title-promotion.png) left top no-repeat;
+ background: url(title-promotion.png) left top no-repeat;
 }
 
 h1.title-promotion-dm {
- background: url(/assets/title-promotion-dm.png) left top no-repeat;
+ background: url(title-promotion-dm.png) left top no-repeat;
 }
 
 h1.title-promotion-homepage {
- background: url(/assets/title-promotion-homepage.png) left top no-repeat;
+ background: url(title-promotion-homepage.png) left top no-repeat;
 }
 
 h1.title-promotion-mobile {
- background: url(/assets/title-promotion-mobile.png) left top no-repeat;
+ background: url(title-promotion-mobile.png) left top no-repeat;
 }
 
 h1.title-guide {
- background: url(/assets/title-guide.png) left top no-repeat;
+ background: url(title-guide.png) left top no-repeat;
 }
 
 h1.title-guide-faq {
- background: url(/assets/title-guide-faq.png) left top no-repeat;
+ background: url(title-guide-faq.png) left top no-repeat;
 }
 
 h1.title-guide-flow {
- background: url(/assets/title-guide-flow.png) left top no-repeat;
+ background: url(title-guide-flow.png) left top no-repeat;
 }
 
 h1.title-guide-dispatch {
- background: url(/assets/title-guide-dispatch.png) left top no-repeat;
+ background: url(title-guide-dispatch.png) left top no-repeat;
 }
 
 h1.title-guide-payment {
- background: url(/assets/title-guide-payment.png) left top no-repeat;
+ background: url(title-guide-payment.png) left top no-repeat;
 }
 
 h1.title-guide-data {
- background: url(/assets/title-guide-data.png) left top no-repeat;
+ background: url(title-guide-data.png) left top no-repeat;
 }
 
 h1.title-guide-inquiry {
- background: url(/assets/title-guide-inquiry.png) left top no-repeat;
+ background: url(title-guide-inquiry.png) left top no-repeat;
 }
 
 h1.title-guide-cancel {
- background: url(/assets/title-guide-cancel.png) left top no-repeat;
+ background: url(title-guide-cancel.png) left top no-repeat;
 }
 
 h1.title-store {
- background: url(/assets/title-store.png) left top no-repeat;
+ background: url(title-store.png) left top no-repeat;
 }
 
 h1.title-store-hokkaido {
- background: url(/assets/title-store-hokkaido.png) left top no-repeat;
+ background: url(title-store-hokkaido.png) left top no-repeat;
 }
 
 h1.title-store-tohoku {
- background: url(/assets/title-store-tohoku.png) left top no-repeat;
+ background: url(title-store-tohoku.png) left top no-repeat;
 }
 
 h1.title-store-kanto {
- background: url(/assets/title-store-kanto.png) left top no-repeat;
+ background: url(title-store-kanto.png) left top no-repeat;
 }
 
 h1.title-store-hokuriku {
- background: url(/assets/title-store-hokuriku.png) left top no-repeat;
+ background: url(title-store-hokuriku.png) left top no-repeat;
 }
 
 h1.title-store-tokai {
- background: url(/assets/title-store-tokai.png) left top no-repeat;
+ background: url(title-store-tokai.png) left top no-repeat;
 }
 
 h1.title-store-kinki {
- background: url(/assets/title-store-kinki.png) left top no-repeat;
+ background: url(title-store-kinki.png) left top no-repeat;
 }
 
 h1.title-store-chugoku {
- background: url(/assets/title-store-chugoku.png) left top no-repeat;
+ background: url(title-store-chugoku.png) left top no-repeat;
 }
 
 h1.title-store-shikoku {
- background: url(/assets/title-store-shikoku.png) left top no-repeat;
+ background: url(title-store-shikoku.png) left top no-repeat;
 }
 
 h1.title-store-kyushu {
- background: url(/assets/title-store-kyushu.png) left top no-repeat;
+ background: url(title-store-kyushu.png) left top no-repeat;
 }
 
 h1.title-fc {
- background: url(/assets/title-fc.png) left top no-repeat;
+ background: url(title-fc.png) left top no-repeat;
 }
 
 h1.title-fc-station {
- background: url(/assets/title-fc-station.png) left top no-repeat;
+ background: url(title-fc-station.png) left top no-repeat;
 }
 
 h1.title-fc-affiliation {
- background: url(/assets/title-fc-affiliation.png) left top no-repeat;
+ background: url(title-fc-affiliation.png) left top no-repeat;
 }
 
 h1.title-fc-briefing {
- background: url(/assets/title-fc-briefing.png) left top no-repeat;
+ background: url(title-fc-briefing.png) left top no-repeat;
 }
 
 h1.title-fc-request {
- background: url(/assets/title-fc-request.png) left top no-repeat;
+ background: url(title-fc-request.png) left top no-repeat;
 }
 
 h1.title-fc-result {
- background: url(/assets/title-fc-result.png) left top no-repeat;
+ background: url(title-fc-result.png) left top no-repeat;
 }
 
 h1.title-fc-contract {
- background: url(/assets/title-fc-contract.png) left top no-repeat;
+ background: url(title-fc-contract.png) left top no-repeat;
 }
 
 h1.title-fc-success {
- background: url(/assets/title-fc-success.png) left top no-repeat;
+ background: url(title-fc-success.png) left top no-repeat;
 }
 
 h1.title-submit {
- background: url(/assets/title-submit.png) left top no-repeat;
+ background: url(title-submit.png) left top no-repeat;
 }
 
 h1.title-price {
- background: url(/assets/title-price.png) left top no-repeat;
+ background: url(title-price.png) left top no-repeat;
 }
 
 h1.title-contact {
- background: url(/assets/title-contact.png) left top no-repeat;
+ background: url(title-contact.png) left top no-repeat;
 }
 
 h1.title-estimate {
- background: url(/assets/title-estimate.png) left top no-repeat;
+ background: url(title-estimate.png) left top no-repeat;
 }
 
 h1.title-company {
- background: url(/assets/title-company.png) left top no-repeat;
+ background: url(title-company.png) left top no-repeat;
 }
 
 h1.title-privacypolicy {
- background: url(/assets/title-privacypolicy.png) left top no-repeat;
+ background: url(title-privacypolicy.png) left top no-repeat;
 }
 
 h1.title-consume {
- background: url(/assets/title-consume.png) left top no-repeat;
+ background: url(title-consume.png) left top no-repeat;
 }
 
 h1.title-sitemap {
- background: url(/assets/title-sitemap.png) left top no-repeat;
+ background: url(title-sitemap.png) left top no-repeat;
 }
 
 h1.title-admin {
- background: url(/assets/title-admin.png) left top no-repeat;
+ background: url(title-admin.png) left top no-repeat;
 }
 
 h1.title-news-member {
- background: url(/assets/title-news-member.png) left top no-repeat;
+ background: url(title-news-member.png) left top no-repeat;
 }
 
 h1.title-news-web {
- background: url(/assets/title-news-web.png) left top no-repeat;
+ background: url(title-news-web.png) left top no-repeat;
 }
 
 h1.title-upload-member {
- background: url(/assets/title-upload-member.png) left top no-repeat;
+ background: url(title-upload-member.png) left top no-repeat;
 }
 
 h1.title-upload-promotion {
- background: url(/assets/title-upload-promotion.png) left top no-repeat;
+ background: url(title-upload-promotion.png) left top no-repeat;
 }
 
 h1.title-upload-other {
- background: url(/assets/title-upload-other.png) left top no-repeat;
+ background: url(title-upload-other.png) left top no-repeat;
 }
 
 h1.title-download-member {
- background: url(/assets/title-download-member.png) left top no-repeat;
+ background: url(title-download-member.png) left top no-repeat;
 }
 
 h1.title-member {
- background: url(/assets/title-member.png) left top no-repeat;
+ background: url(title-member.png) left top no-repeat;
 }
 
 h1.title-member-news {
- background: url(/assets/title-member-news.png) left top no-repeat;
+ background: url(title-member-news.png) left top no-repeat;
 }
 
 h1.title-download-admin {
- background: url(/assets/title-download-admin.png) left top no-repeat;
+ background: url(title-download-admin.png) left top no-repeat;
 }
 
 h1.title-download-promotion {
- background: url(/assets/title-download-promo.png) left top no-repeat;
+ background: url(title-download-promo.png) left top no-repeat;
 }
 
 h1.title-download-other {
- background: url(/assets/title-download-other.png) left top no-repeat;
+ background: url(title-download-other.png) left top no-repeat;
 }
 
 h1.title-upload-admin {
- background: url(/assets/title-upload-admin.png) left top no-repeat;
+ background: url(title-upload-admin.png) left top no-repeat;
 }
 
 h1.title-upload-sales {
- background: url(/assets/title-upload-sales.png) left top no-repeat;
+ background: url(title-upload-sales.png) left top no-repeat;
 }
 
 h1.title-member-offset {
- background: url(/assets/title-member-offset.png) left top no-repeat;
+ background: url(title-member-offset.png) left top no-repeat;
 }
 
 h1.title-member-envelope {
- background: url(/assets/title-member-envelope.png) left top no-repeat;
+ background: url(title-member-envelope.png) left top no-repeat;
 }
 
 h1.title-member-wear {
- background: url(/assets/title-member-wear.png) left top no-repeat;
+ background: url(title-member-wear.png) left top no-repeat;
 }
 
 h1.title-member-sp {
- background: url(/assets/title-member-sp.png) left top no-repeat;
+ background: url(title-member-sp.png) left top no-repeat;
 }
 
 h1.title-member-bbs {
- background: url(/assets/title-member-bbs.png) left top no-repeat;
+ background: url(title-member-bbs.png) left top no-repeat;
 }
 
 h2.des-promotion-web_st {
@@ -1263,31 +1276,31 @@ h2.des-promotion-web_st {
 }
 
 h2.des-fc-station {
- background: url(/assets/img-fc-station.png) left top no-repeat;
+ background: url(img-fc-station.png) left top no-repeat;
 }
 
 h2.des-fc-affiliation {
- background: url(/assets/img-fc-affiliation.png) left top no-repeat;
+ background: url(img-fc-affiliation.png) left top no-repeat;
 }
 
 h2.des-fc-briefing {
- background: url(/assets/img-fc-briefing.png) left top no-repeat;
+ background: url(img-fc-briefing.png) left top no-repeat;
 }
 
 h2.des-fc-request {
- background: url(/assets/img-fc-request.png) left top no-repeat;
+ background: url(img-fc-request.png) left top no-repeat;
 }
 
 h2.des-fc-result {
- background: url(/assets/img-fc-result.png) left top no-repeat;
+ background: url(img-fc-result.png) left top no-repeat;
 }
 
 h2.des-fc-contract {
- background: url(/assets/img-fc-contract.png) left top no-repeat;
+ background: url(img-fc-contract.png) left top no-repeat;
 }
 
 h2.des-fc-success {
- background: url(/assets/img-fc-success.png) left top no-repeat;
+ background: url(img-fc-success.png) left top no-repeat;
 }
 
 p.tax {
@@ -1304,7 +1317,7 @@ a:link.telegram {
  text-indent: -9999px;
  border: 0;
  overflow: hidden;
- background: url(/assets/button-telegram.png) left top no-repeat;
+ background: url(button-telegram.png) left top no-repeat;
 }
 
 a:hover.telegram, a:hover.dl {
@@ -1320,7 +1333,7 @@ a:link.dl {
  text-indent: -9999px;
  border: 0;
  overflow: hidden;
- background: url(/assets/button-download.png) left top no-repeat;
+ background: url(button-download.png) left top no-repeat;
 }
 
 a:link.nenga, a:visited.nenga, a:active.nenga {
@@ -1337,7 +1350,7 @@ article h1.title-top {
  width: 650px;
  height: 225px;
  text-indent: -9999px;
- background: url(/assets/img-top-main.png) left top no-repeat;
+ background: url(img-top-main.png) left top no-repeat;
 }
 
 div#top-banner01 {
@@ -1380,7 +1393,7 @@ div#box h3 {
  height: 25px;
  line-height: 25px;
  padding: 0px 10px 0px 18px;
- background: url(/assets/bg-top-subtitle.png) left top no-repeat;
+ background: url(bg-top-subtitle.png) left top no-repeat;
 }
 
 div#box-right {
@@ -1415,8 +1428,7 @@ div#box-right h3 {
  height: 25px;
  line-height: 25px;
  padding: 0px 10px 0px 18px;
- background: url(/assets/bg-top-subtitle_s.png) left top no-repeat;
- margin-bottom: -2px;
+ background: url(bg-top-subtitle_s.png) left top no-repeat;
 }
 
 
@@ -1469,7 +1481,6 @@ div#footer-container {
  width: 100%;
  height: 36px;
  border-top: 2px groove #f9f9f9;
- padding-bottom: 25px;
 }
 
 div#footer-navi {
@@ -1493,7 +1504,7 @@ ul#footer-navi li span {
  width: 17px;
  height: 12px;
  line-height: 12px;
- background: url(/assets/footer-line.png) top left no-repeat;
+ background: url(footer-line.png) top left no-repeat;
  padding: 0px 8px;
  display: inline;
 }
@@ -1530,7 +1541,7 @@ h3.web_st01 {
  width: 197px;
  height: 36px;
  text-indent: -9999px;
- background: url(/assets/title-promotion-web_st01.png) top left no-repeat;
+ background: url(title-promotion-web_st01.png) top left no-repeat;
  border-right: 1px solid #c8c8c8;
  margin-right: 20px;
  float: left;
@@ -1540,7 +1551,7 @@ h3.web_st02 {
  width: 197px;
  height: 124px;
  text-indent: -9999px;
- background: url(/assets/title-promotion-web_st02.png) top left no-repeat;
+ background: url(title-promotion-web_st02.png) top left no-repeat;
  border-right: 1px solid #c8c8c8;
  margin-right: 20px;
  float: left;
@@ -1550,7 +1561,7 @@ h3.web_st03 {
  width: 197px;
  height: 124px;
  text-indent: -9999px;
- background: url(/assets/title-promotion-web_st03.png) top left no-repeat;
+ background: url(title-promotion-web_st03.png) top left no-repeat;
  border-right: 1px solid #c8c8c8;
  margin-right: 20px;
  float: left;
@@ -1560,7 +1571,7 @@ h3.web_st04 {
  width: 197px;
  height: 218px;
  text-indent: -9999px;
- background: url(/assets/title-promotion-web_st04.png) top left no-repeat;
+ background: url(title-promotion-web_st04.png) top left no-repeat;
  border-right: 1px solid #c8c8c8;
  margin-right: 20px;
  float: left;
@@ -1570,7 +1581,7 @@ h3.web_st05 {
  width: 197px;
  height: 133px;
  text-indent: -9999px;
- background: url(/assets/title-promotion-web_st05.png) top left no-repeat;
+ background: url(title-promotion-web_st05.png) top left no-repeat;
  border-right: 1px solid #c8c8c8;
  margin-right: 20px;
  float: left;

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="超激安印刷、名刺がなんと100枚800円から！ぷりんと博士だからできる全国翌日スピード対応。頼んだ翌日にはあなたのお手元に届きます。激安スピード印刷なら、ぷりんと博士！">
+<meta name="keywords" content="プリント,印刷,フランチャイズ,独立,FC,開業">
+
+<!--[if lt IE 9]><script src="https://www.printhakase.com/js/html5.js"></script>
+<![endif]-->
+    <%= stylesheet_link_tag "temp", "style" %>
+    <%= javascript_include_tag "temp", "style" %>
+    <%= csrf_meta_tags %>
+    
+<title>激安スピード印刷ならおまかせ！ぷりんと博士</title>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+</head>
+
+<body>
+ <div>top layout</div>
+<!-- START CONTAINER -->
+ <div id="container">
+<!-- START WRAPPER -->
+  <div id="wrapper">
+
+<!-- START HEADER -->
+   <header>
+    <div id="header-container">
+     <div id="logo">
+      <%= link_to "プリント博士", :controller => "top", :action => "index" %>
+     </div>
+     <div id="contact-container">
+      <div id="tel">
+       <%= image_tag 'button-fc.png' %> 0120-5454-22 受付時間／10：00～19：00（土・日・祝日除く）
+      </div>
+      <div id="contact-wrapper">
+       <ul id="contact">
+        <li id="contact">
+        <%= link_to "お問い合わせ", :controller => "top", :action => "contact" %>
+        </li>
+        <li id="offer">
+        <%= link_to "お見積もり", :controller => "top", :action => "estimate" %> 
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </header>
+<!-- END HEADER -->
+
+<!-- START CONTENT -->
+   <div id="contents">
+
+<!-- START LEFTSIDE -->
+    <div id="leftbar">
+<!-- START MENU -->
+     <nav>
+      <ul id="menu">
+       <li id="home"><%= link_to "プリント博士", :controller => "top", :action => "index" %></li>
+       
+       
+       <li id="submit"><%= link_to "データ入稿", submit_path %></li>
+       <li id="price"><%= link_to "各種印刷価格表", price_path %></li>
+       <li id="printing"><span class="printing"><%= link_to "各種印刷サービス", printing_path, class: "printing" %></span>
+        <ul id="submenu">
+         <li><%= link_to "データ入稿", submit_path %></li>
+         <li><%= link_to "名刺・カード印刷", card_path %></li>
+         <li><%= link_to "名入れ伝票印刷", slip_path %></li>
+         <li><%= link_to "ハガキ印刷", postcard_path %></li>
+         <li><%= link_to "名入れ封筒印刷", envelope_path %></li>
+         <li><%= link_to "チラシ・フライヤー印刷", flyer_path %></li>
+         <li><%= link_to "ポスター印刷", poster_path %></li>
+         <li><%= link_to "会社案内印刷", brouchure_path %></li>
+         <li><%= link_to "ユニフォームプリント", uniform_path %></li>
+         <li><%= link_to "はんこ・スタンプ作成", stamp_path %></li>
+         <li><%= link_to "ノベルティ名入れ印刷", novelty_path %></li>
+         <li id="bottom"><%= link_to "ネット電報", telegram_path %></li>
+        </ul>
+       </li>
+       <li id="promo"><span class="promo"><%= link_to "各種販促サービス", promotion_path, class: "promo" %></span>
+        <ul id="submenu">
+         <li><%= link_to "DM用販促グッズ", dm_path %></li>
+         <li><%= link_to "ホームページ作成", homepage__path %> <span class="red">NEW！</span></li>
+         <li id="bottom"><%= link_to "携帯サイト・メルマガツール", mobile_path %></li>
+        </ul>
+       </li>
+       <li id="guide"><span class="guide"><%= link_to "ご利用ガイド", guide_path, class: "guide" %></span>
+        <ul id="submenu">
+         <li><%= link_to "よくあるご質問", faq_path %></li>
+         <li><%= link_to "ご注文の手順について", flow_path %></li>
+         <li><%= link_to "発送について", dispatch_path %></li>
+         <li><%= link_to "お支払いについて", payment_path %></li>
+         <li><%= link_to "入稿について", data_path %></li>
+         <li><%= link_to "お問い合わせについて", inquiry_path %></li>
+         <li id="bottom"><%= link_to "キャンセル・変更について", cancel_path %></li>
+        </ul>
+       </li>
+       <li id="store"><span class="store"><a href="/store/" class="store"><%= link_to "お近くの博士たち", store_path, class: "store" %></span>
+        <ul id="submenu">
+         <li><%= link_to "北海道エリア", hokkaido_path %></li>
+         <li><%= link_to "東北エリア", tohoku_path %></li>
+         <li><%= link_to "関東エリア", kanto_path %></li>
+         <li><%= link_to "信越・北陸エリア", hokuriku_path %></li>
+         <li><%= link_to "東海エリア",  tokai_path %></li>
+         <li><%= link_to "近畿エリア", kinki_path %></li>
+         <li><%= link_to "中国エリア", chugoku_path %></li>
+         <li><%= link_to "四国エリア", shikoku_path %></li>
+         <li id="bottom"><%= link_to "九州エリア", kyushu_path %></li>
+        </ul>
+       </li>
+       <li id="fc"><span class="fc"><%= link_to "加盟店募集", fc_path, class: "fc" %></span>
+        <ul id="submenu">
+         <li><%= link_to "ぷりんと博士ステーション", station_path %></li>
+         <li><%= link_to "博士になるには", affiliation_path %></li>
+         <li><%= link_to "事業説明会", briefing_path %></li>
+         <li><%= link_to "資料請求", request_path %></li>
+         <li><%= link_to "加盟実績", result_path %></li>
+         <li><%= link_to "契約内容", contract_path %></li>
+         <li id="bottom"><%= link_to "博士たちの成功談", success_path %></li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+<!-- END MENU -->
+<!-- START SSL -->
+     <div id="ssl">
+      <table width="115" border="0" cellpadding="2" cellspacing="0" title="SSLサーバ証明書導入の証　グローバルサインのサイトシール">
+       <tr>
+        <td width="115" align="center" valign="top">
+         <span id="ss_img_wrapper_115-57_image_ja">
+          <a href="http://jp.globalsign.com/" target="_blank">
+           <img alt="SSL　グローバルサインのサイトシール" border="0" id="ss_jpn2_gif" src="http://seal.globalsign.com/SiteSeal/images/gs_noscript_115-57_ja.gif">
+         </span><br>
+         <script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gs_image_115-57_ja.js" defer="defer"></script>
+         <a href="https://www.sslcerts.jp/" target="_blank" style="color:#000000; text-decoration:none; font:bold 12px 'ＭＳ ゴシック',sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">SSLとは?</a>
+        </td>
+       </tr>
+      </table>
+      <p>ぷりんと博士サイトは、プライバシー保護の為SSL暗号化通信を導入しています。</p>
+     </div>
+<!-- END SSL -->
+    </div>
+<!-- END LEFTSIDE -->
+
+<!-- START MAIN -->
+    <div id="main">
+    
+     <%= yield %>
+    
+    </div>
+<!-- END MAIN -->
+
+   </div>
+<!-- END CONTENTS -->
+  </div>
+<!-- END WRAPPER -->
+
+  <div id="adj"></div>
+
+<!-- START FOOTER -->
+  <footer>
+   <div id="footer-container" class="clearfix">
+
+    <div id="footer-navi">
+     <ul id="footer-navi">
+      <li><%= link_to "会社案内", company_path %><span></span></li>
+      <li><%= link_to "個人情報保護方針", privacypolicy_path %><span></span></li>
+      <li><%= link_to "特定商取法に基づく表示", consume_path %><span></span></li>
+      <li><%= link_to "サイトマップ", sitemap_path %><span></span></li>
+      <li><a href="http://www.facebook.com/printhakase/" target="_blank">Facebookページ</li>
+     </ul>
+    </div>
+
+   </div>
+   <div id="copyright">&copy; 2016 EPIC Co.,Ltd. All Rights Reserved.
+　 </div>
+  </footer>
+<!-- END FOOTER -->
+
+ </div>
+<!-- END CONTAINER -->
+<script type="text/javascript">
+var preHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+var param = "secid=sBN2516bc";
+document.write(unescape("%3Cscript src='" + preHost + "sashare.com/b/sokus.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+
+</html>

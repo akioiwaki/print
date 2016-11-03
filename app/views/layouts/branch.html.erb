@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+<link rel="shortcut icon" href="https://www.printhakase.com/favicon.ico">
+
+
+<!--[if lt IE 9]><script src="https://www.printhakase.com/js/html5.js"></script>
+<![endif]-->
+    <%= stylesheet_link_tag "temp2", "style2" %>
+    <%= javascript_include_tag "html5" %>
+    <%= csrf_meta_tags %>
+    
+    
+<title>足立西店 | ぷりんと博士</title>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27054988-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+
+<!-- START CONTAINER -->
+ <div id="container">
+<!-- START WRAPPER -->
+  <div id="wrapper">
+
+<%= yield %>
+
+  </div>
+<!-- END WRAPPER -->
+ </div>
+<!-- END CONTAINER -->
+</body>
+
+</html>

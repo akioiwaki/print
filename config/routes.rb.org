@@ -1,0 +1,77 @@
+Rails.application.routes.draw do
+
+
+  root "top#index"
+  get "top/company"
+  get "top/privacypolicy"
+  get "top/consume"
+  get "top/sitemap"
+  get "top/consume"
+  get "top/contact"
+  get "top/estimate"
+  get "top/price"
+  get "top/submit"
+
+  get 'guide/index'
+  get "guide/cancel"
+  get "guide/data"
+  get "guide/faq"
+  get "guide/flow"
+  get "guide/guide"
+  get "guide/inquiry"
+  get "guide/payment"
+  get "guide/dispatch"
+
+  get "fc/index"
+  get "fc/station"
+  get "fc/briefing"
+  get "fc/result"
+  get "fc/success"
+  get "fc/affiliation"
+  get "fc/contract"
+  get "fc/request"
+  
+  get 'printing/index'
+  get "printing/smile"
+  get "printing/card"
+  get "printing/slip"
+  get "printing/postcard"
+  get "printing/envelope"
+  get "printing/flyer"
+  get "printing/poster"
+  get "printing/brouchure"
+  get "printing/uniform"
+  get "printing/stamp"
+  get "printing/telegram"
+  
+  get 'store/index'
+  get "store/chugoku"
+  get "store/hokkaido"
+  get "store/hokuriku"
+  get "store/kanto"
+  get "store/kinki"
+  get "store/kyushu"
+  get "store/shikoku"
+  get "store/tohoku" 
+  get "store/tokai"
+ 
+  get "branch/adachinishi"
+  get "branch/edogawa"
+  get "branch/oota"
+  get "branch/hachinohe"
+  get "branch/hikarigaoka"
+  get "branch/kyotonakagyo"
+  get "branch/shiranuka"
+  get "branch/takamatsunishi"  
+  get "branch/tokushima"
+  get "branch/yokohamacyuou"
+
+  get 'promotion/index'
+  get "promotion/dm"
+  get "promotion/homepage_"
+  get "promotion/mobile"
+  
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+

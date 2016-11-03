@@ -1,4 +1,5 @@
 class FcController < ApplicationController
+  layout 'top'
   def index
   end
   

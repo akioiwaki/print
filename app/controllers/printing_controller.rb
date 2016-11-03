@@ -1,5 +1,6 @@
 class PrintingController < ApplicationController
-  def index
+  layout 'top'
+  def printing
   end
 
   def smile
@@ -30,5 +31,29 @@ class PrintingController < ApplicationController
   end
   
   def telegram
+  end
+  
+  def apron
+  end
+  
+  def baby
+  end
+  
+  def cap
+  end
+  
+  def hoodie
+  end
+  
+  def polo
+  end
+  
+  def sweat
+  end
+  
+  def tshirt
+  end
+  
+  def tanktop
   end
 end

@@ -1,4 +1,5 @@
 class GuideController < ApplicationController
+  layout 'top'
   def index
   end
   
@@ -13,9 +14,9 @@ class GuideController < ApplicationController
   
   def flow
   end
-
-  def guide
-  end
+  
+  # def dispatch
+  # end
   
   def inquiry
   end
@@ -23,7 +24,5 @@ class GuideController < ApplicationController
   def payment
   end
   
-  # def dispatch
-  # end
 
 end

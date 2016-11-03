@@ -1,6 +1,3 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
  font-family: "ＭＳ Ｐゴシック", Geneva, Arial, Verdana, sans-serif;
@@ -29,7 +26,6 @@ ul#submenu li a:link, ul#submenu li a:visited, ul#submenu li a:active {
  border-bottom: 0;
 }
 
-
 ul#submenu li a:hover, ul#submenu li a:focus {
  color: #1a75bb;
  border-bottom: 1px solid #1a75bb;
@@ -45,7 +41,6 @@ div#des-container h2, h2.smile {
  font-size: 18px;
  line-height: 18px;
 }
-
 
 section h3 {
  font-size: 12px;

@@ -1,4 +1,5 @@
 class PromotionController < ApplicationController
+  layout 'top'
   def index
   end
   

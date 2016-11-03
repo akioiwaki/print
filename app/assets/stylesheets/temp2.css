@@ -1,0 +1,249 @@
+*{ 
+ padding: 0px;
+ margin: 0px;
+}
+
+html {
+ scrollbar-track-color: #a2a2a2;
+ scrollbar-face-color: #e7e7e7;
+ scrollbar-shadow-color: #e7e7e7;
+ scrollbar-darkshadow-color: #737373;
+ scrollbar-highlight-color: #e7e7e7;
+ scrollbar-3dlight-color: #ffffff;
+ scrollbar-arrow-color: #888888;
+ height:100%;
+ overflow-y: auto;
+ overflow-x: auto;
+}
+
+html, body {
+ width: 100%;
+ min-width: 880px;
+ height: 100%;
+ overflow: auto;
+ background-color: #b1e1ff;
+}
+
+div#container, div#wrapper {
+ width: 100%;
+ text-align: center;
+}
+
+header, div#contents {
+ width: 800px;
+ height: 100%;
+ padding2: 0px 40px 0px;
+ margin: 0px auto;
+ text-align: center;
+}
+
+
+
+/* ヘッダー */
+
+header {
+ display: block;
+ width: 750px;
+ height: 102px;
+ margin: 25px auto 13px;
+ padding: 0px 25px;
+ background: url(bg-header_2.png) left top no-repeat;
+}
+
+div#store {
+ width: 550px;
+ height: 78px;
+ padding: 12px 0px;
+ float: left;
+}
+
+div#contact {
+ width: 200px;
+ height: 50px;
+ padding: 25px 0px;
+ float: right;
+}
+
+a:link.contact {
+ display: block;
+ width: 200px;
+ height: 50px;
+ text-indent: -9999px;
+ border: 0;
+ background: url(button-contact_2.png) left top no-repeat;
+}
+
+h1 {
+ width: 550px;
+ height: 78px;
+ text-indent: -9999px;
+}
+
+h1.title-shiranuka {
+ background: url(title-shiranuka.png) left top no-repeat;
+}
+
+h1.title-hachinohe {
+ background: url(title-hachinohe.png) left top no-repeat;
+}
+
+h1.title-adachinishi {
+ background: url(title-adachinishi.png) left top no-repeat;
+}
+
+h1.title-edogawa {
+ background: url(title-edogawa.png) left top no-repeat;
+}
+
+h1.title-gotanda {
+ background: url(title-gotanda.png) left top no-repeat;
+}
+
+h1.title-tokushima {
+ background: url(title-tokushima.png) left top no-repeat;
+}
+
+h1.title-tokyokita {
+ background: url(title-tokyokita.png) left top no-repeat;
+}
+
+h1.title-hikarigaoka {
+ background: url(title-hikarigaoka.png) left top no-repeat;
+}
+
+h1.title-niigataminami {
+ background: url(title-niigataminami.png) left top no-repeat;
+}
+
+h1.title-kyotonakagyo {
+ background: url(title-kyotonakagyo.png) left top no-repeat;
+}
+
+h1.title-oota {
+ background: url(title-oota.png) left top no-repeat;
+}
+
+h1.title-hadanoisehara {
+ background: url(title-hadanoisehara.png) left top no-repeat;
+}
+
+h1.title-yokohamacyuou {
+ background: url(title-yokohamacyuou.png) left top no-repeat;
+}
+
+h1.title-takamatsunishi {
+ background: url(title-takamatsunishi.png) left top no-repeat;
+}
+
+h1.title-tokushima {
+ background: url(title-tokushima.png) left top no-repeat;
+}
+
+h1.title-fussahamura {
+ background: url(title-fussahamura.png) left top no-repeat;
+}
+
+
+
+
+
+/* メイン */
+
+div#contents {
+ text-align: left;
+}
+
+div#contents div#top {
+ height: 26px;
+ background: url(bg-contents-top.png) left top no-repeat;
+}
+
+div#contents div#main {
+ display: block;
+ height: 100%;
+ padding: 0px 25px;
+ background: url(bg-contents-main.png) left top repeat-y;
+}
+
+div#contents div#bottom {
+ height: 26px;
+ background: url(bg-contents-bottom.png) left top no-repeat;
+}
+
+div#info table.info {
+ border-collapse: collapse;
+ border-spacing: 0;
+ width: 750px;
+ height: 140px;
+ border: 5px solid #c8c8c8;
+ margin-bottom: 25px;
+ overflow: hidden;
+ background-color2: #55aa66;
+}
+
+div#info table.info td img {
+vertical-align: top;
+}
+
+h2 {
+ width: 750px;
+ height: 25px;
+ padding-left: 18px;
+ margin-bottom: 25px;
+ font-size: 12px;
+ line-height: 25px;
+ background: url(bg-title.png) left top no-repeat;
+}
+
+section {
+ margin-bottom: 25px;
+}
+
+div#img {
+ width: 142px;
+ height: 171px;
+ margin-right: 25px;
+ float: left;
+}
+
+div#txt {
+ display: block;
+ width: 583px;
+ margin-left: 167px;
+}
+
+h3.subtitle {
+ width: 100%
+ margin-left: 25px;
+ padding-bottom: 3px;
+ margin-bottom: 13px;
+ border-bottom: 1px dotted #c8c8c8;
+}
+
+ul#list {
+ width: 250px;
+ float: left;
+}
+
+ul#list li {
+ margin-left: 20px;
+}
+
+
+
+/* フロート解除 */
+
+div#adj {
+ clear: both;
+}
+
+
+
+/* フッター */
+
+div#copyright {
+ color: #333333;
+ height: 36px;
+ line-height: 36px;
+ text-align: center;
+}

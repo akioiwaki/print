@@ -1,19 +1,11 @@
 class StoreController < ApplicationController
+  layout 'top'
   def index
   end
-  
-  def adachinishi
+
+  def chugoku
   end
-  
-  def chutoku
-  end
-  
-  def edogawa
-  end
-  
-  def hachiohe
-  end
-  
+
   def hokkaido
   end
   
@@ -28,38 +20,8 @@ class StoreController < ApplicationController
   
   def kinki
   end
-  
-  def kyotonakagyo
-  end
-  
+
   def kyushu
   end
   
-  def oota
-  end
-  
-  def shikoku
-  end
-  
-  def shiranuka
-  end
-  
-  def takamatsunishi
-  end
-  
-  def tohoku
-  end
-  
-  def tokai
-  end
-  
-  def tokushima
-  end
-  
-  def tokyokita
-  end
-  
-  def yokohamacyuou
-  end
-
 end
