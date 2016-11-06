@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'consume' => 'top#consume'
   get 'sitemap' => 'top#sitemap'
   get 'consume' => 'top#consume'
-  get 'contact' => 'top#contact'
+  
+  get 'contact' => 'contact#index' #入力画面
+  post 'contact/confirm' => 'contact#confirm' #確認画面
+  post 'contact/thanks' => 'contact#thanks' #送信完了画面
+  
   get 'estimate' => 'top#estimate'
   get 'price' => 'top#price'
   get 'submit' => 'top#submit'

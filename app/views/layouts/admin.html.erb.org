@@ -15,8 +15,7 @@
 <!--[if lt IE 9]>
 <script src="https://www.printhakase.com/js/html5.js"></script>
 <![endif]-->
-<link rel="stylesheet" href="https://www.printhakase.com/css/temp.css">
-<link rel="stylesheet" href="https://www.printhakase.com/css/style.css">
+
 <link rel="shortcut icon" href="https://www.printhakase.com/favicon.ico">
 <title>管理者専用エリア | ぷりんと博士</title>
 <script type="text/javascript">

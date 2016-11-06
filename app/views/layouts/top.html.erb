@@ -12,6 +12,8 @@
     <%= javascript_include_tag "temp", "style" %>
     <%= csrf_meta_tags %>
     
+    <script>(function(t,a,y,o,r,i){r=a.createElement(y),i=a.getElementsByTagName(y)[0];r.type='text/javascript';r.async=1;r.src='//tayori.com/form/041405b304632479c2f15d770a97f361e52ade15/tag.js';r.id='tayori-tag';i.parentNode.insertBefore(r,i)})(window,document,'script');</script>
+    
 <title>激安スピード印刷ならおまかせ！ぷりんと博士</title>
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -28,6 +30,7 @@
 
 <body>
  <div>top layout</div>
+ <div><a href="https://tayori.com/form/041405b304632479c2f15d770a97f361e52ade15">dd</a></div>
 <!-- START CONTAINER -->
  <div id="container">
 <!-- START WRAPPER -->
@@ -46,10 +49,10 @@
       <div id="contact-wrapper">
        <ul id="contact">
         <li id="contact">
-        <%= link_to "お問い合わせ", :controller => "top", :action => "contact" %>
+        <%= link_to "お問い合わせ", :controller => "contact", :action => "index" %>
         </li>
         <li id="offer">
-        <%= link_to "お見積もり", :controller => "top", :action => "estimate" %> 
+        <% link_to "お見積もり", :controller => "top", :action => "estimate" %> 
         </li>
        </ul>
       </div>

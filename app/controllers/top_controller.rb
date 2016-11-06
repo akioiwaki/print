@@ -16,9 +16,6 @@ class TopController < ApplicationController
   def sitemap
   end
   
-  def contact
-  end
-  
   def estimate
   end
   

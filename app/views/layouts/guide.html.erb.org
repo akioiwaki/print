@@ -8,11 +8,7 @@
 
 <!--[if lt IE 9]><script src="https://www.printhakase.com/js/html5.js"></script>
 <![endif]-->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    controller.controller_name, media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag controller.controller_name, 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tags %>
+  
     
 <title>激安スピード印刷ならおまかせ！ぷりんと博士</title>
 <script type="text/javascript">
