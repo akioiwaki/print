@@ -13,12 +13,12 @@
         <%= @contact.firstname %>
       </td>
     </tr>
-      <th>フリガナ</th>
+      <th>名前</th>
       <td>
         <%= f.hidden_field :sirname_kana %>
-        <%= @contact.sirname_kana %>
+        <%= @contact.sirname %>
         <%= f.hidden_field :firstname_kana %>
-        <%= @contact.firstname_kana %>
+        <%= @contact.firstname %>
       </td>
     </tr>
      <tr>
@@ -31,15 +31,15 @@
       <th>郵便番号</th>
       <td>
         <%= f.hidden_field :postcode1 %>
-        <%= @contact.postcode1 %>-
+        <%= @contact.postcode1 %>
         <%= f.hidden_field :postcode2 %>
         <%= @contact.postcode2 %>
       </td>
     </tr> <tr>
       <th>都道府県</th>
       <td>
-        <li><%= @contact.prefecture %><%= f.hidden_field :prefecture %></li>
-      
+        <%= f.hidden_field :prefecture %>
+        <%= @contact.prefecture %>
       </td>
     </tr> <tr>
       <th>市区町村</th>
@@ -51,7 +51,7 @@
       <th>町名・番地</th>
       <td>
         <%= f.hidden_field :town %>
-        <%= @contact.town %>
+        <%= @contact.ntowname %>
       </td>
     </tr> <tr>
       <th>建物名</th>
@@ -80,17 +80,15 @@
     </tr> <tr>
       <th>ご希望の連絡方法</th>
       <td>
-         <%= check_box.name %>
-        <%= check_box_tag 'hoge_users_attributes[]', checl.id %>
-        <%#= f.hidden_field :check %>
-        <%#= @contact.check %>
+        <%= f.hidden_field :check %>
+        <%= @contact.check %>
       </td>
     </tr>
     <tr>
       <th>お問い合わせ種別</th>
       <td>
-        <%= f.hidden_field :subject %>
-        <%= simple_format(@contact.subject) %>
+        <%= f.hidden_field :prefecture %>
+        <%= simple_format(@contact.prefecture) %>
       </td>
     </tr>
     <tr>

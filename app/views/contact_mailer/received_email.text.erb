@@ -1,10 +1,21 @@
 Webサイトからお問い合わせがありました。
  
 --------------------------
-Name: <%= @contact.name %>
-Email: <%= @contact.email %>
-Message:
-<%= @contact.message %>
+お名前: <%= @contact.sirname %> <%= @contact.firstname %>
+フリガナ: <%= @contact.sirname_kana %> <%= @contact.firstname_kana %>
+会社名・担当部署: <%= @contact.company %>
+郵便番号: <%= @contact.postcode1 %>-<%= @contact.postcode2 %>
+都道府県: <%= @contact.prefecture %>
+市町村: <%= @contact.city %>
+町名・番地：<%= @contact.town %>
+建物名: <%= @contact.building %>
+TEL: <%= @contact.tel %>
+FAX: <%= @contact.fax %>
+Eメール: <%= @contact.email %>
+ご希望の連絡方法: <%= @contact.check %>
+お問合わせ種別: <%= @contact.subject %>
+お問合わせ内容: <%= @contact.message %>
+
 --------------------------
 
-以上で完成です。
+
