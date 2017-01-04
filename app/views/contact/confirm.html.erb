@@ -80,10 +80,9 @@
     </tr> <tr>
       <th>ご希望の連絡方法</th>
       <td>
-         <%= check_box.name %>
-        <%= check_box_tag 'hoge_users_attributes[]', checl.id %>
-        <%#= f.hidden_field :check %>
-        <%#= @contact.check %>
+        <%= f.hidden_field :check %>
+        <%= @contact.check .join(", ") %>
+
       </td>
     </tr>
     <tr>

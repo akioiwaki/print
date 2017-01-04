@@ -51,9 +51,10 @@
         <li id="contact">
         <%= link_to "お問い合わせ", :controller => "contact", :action => "index" %>
         </li>
-        <li id="offer">
-        <% link_to "お見積もり", :controller => "top", :action => "estimate" %> 
+         <li id="offer">
+        <%= link_to "お見積もり", :controller => "estimate", :action => "index" %>
         </li>
+       
        </ul>
       </div>
      </div>
@@ -72,8 +73,8 @@
        <li id="home"><%= link_to "プリント博士", :controller => "top", :action => "index" %></li>
        
        
-       <li id="submit"><%= link_to "データ入稿", submit_path %></li>
-       <li id="price"><%= link_to "各種印刷価格表", price_path %></li>
+       <li id="submit"><%= link_to "データ入稿", :controller => "submit", action_name => "index"  %></li>
+       <li id="price"><span class="printing"><%= link_to "各種印刷価格表",price_path %></span></li>
        <li id="printing"><span class="printing"><%= link_to "各種印刷サービス", printing_path, class: "printing" %></span>
         <ul id="submenu">
          <li><%= link_to "データ入稿", submit_path %></li>

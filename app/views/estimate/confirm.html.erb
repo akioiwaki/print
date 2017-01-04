@@ -1,0 +1,167 @@
+<div class="page-header">
+  <h1>お問い合わせ</h1>
+</div>
+ 
+<%= form_for @estimate, :url => estimate_thanks_path do |f| %>
+  <table class="table">
+
+    <tr><th>ご希望の印刷物</th>
+      <td>
+        <%= f.hidden_field :paper1 %>
+        <%= @estimate.paper1 %>
+        <%= @estimate.paper %>
+        <%= f.hidden_field :paper %>
+
+      </td>
+    </tr>
+    <tr><th>型番</th>
+      <td>
+        <%= f.hidden_field :type %>
+        <%= @estimate.type %>
+      </td>
+    </tr>
+    <tr><th>刷り色数: 表面</th>
+      <td>
+        <%= f.hidden_field :color1 %>
+        <%= @estimate.color1 %>
+      </td>
+    </tr>   
+    <tr><th>刷り色数: 裏面</th>   
+      <td>
+        <%= f.hidden_field :color2 %>
+        <%= @estimate.color2 %>
+      </td>
+    </tr>
+    <tr><th>用紙サイズ</th>
+      <td>
+        <%= f.hidden_field :size %>
+        <%= @estimate.size %>
+        <%= f.hidden_field :size0 %>
+        <%= @estimate.size0 %> :
+        <%= f.hidden_field :size01 %>
+        <%= @estimate.size01 %> mm x 
+        <%= f.hidden_field :size02 %>
+        <%= @estimate.size02 %> mm
+      </td>
+    </tr>
+    </tr>
+    <tr> <th>必要数</th>
+      <td>
+        <%= f.hidden_field :amount %>
+        <%= @estimate.amount %>
+      </td>
+    </tr>    
+    <tr><th>納品納品日</th>
+      <td>
+        <%= f.hidden_field :deliver %>
+        <%= @estimate.deliver %>
+      </td>
+    </tr>
+    <tr><th>添付ファイル01</th>
+      <td>
+        <%= f.hidden_field :attachment %>
+        <%= @estimate.attachment %>
+      </td>
+    </tr>    
+    <tr><th>添付ファイル02</th>
+      <td></td>
+    </tr>    
+    <tr><th>添付ファイル03</th>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <th>お名前</th>
+      <td>
+        <%= f.hidden_field :sirname %>
+        <%= @estimate.sirname %>
+        <%= f.hidden_field :firstname %>
+        <%= @estimate.firstname %>
+      </td>
+    </tr>
+      <th>フリガナ</th>
+      <td>
+        <%= f.hidden_field :sirname_kana %>
+        <%= @estimate.sirname_kana %>
+        <%= f.hidden_field :firstname_kana %>
+        <%= @estimate.firstname_kana %>
+      </td>
+    </tr>
+     <tr>
+      <th>会社名・担当部署</th>
+      <td>
+        <%= f.hidden_field :company %>
+        <%= @estimate.company %>
+      </td>
+    </tr> 
+    <tr>
+      <th>郵便番号</th>
+      <td>
+        <%= f.hidden_field :postcode1 %>
+        <%= @estimate.postcode1 %>-
+        <%= f.hidden_field :postcode2 %>
+        <%= @estimate.postcode2 %>
+      </td>
+    </tr> 
+    <tr>
+      <th>都道府県</th>
+      <td>
+        <li>
+        <%= @estimate.prefecture %>
+        <%= f.hidden_field :prefecture %>
+        </li>
+      
+      </td>
+    </tr> 
+    <tr>
+      <th>市区町村</th>
+      <td>
+        <%= f.hidden_field :city %>
+        <%= @estimate.city %>
+      </td>
+    </tr> 
+    <tr>
+      <th>町名・番地</th>
+      <td>
+        <%= f.hidden_field :town %>
+        <%= @estimate.town %>
+      </td>
+    </tr> 
+    <tr>
+      <th>建物名</th>
+      <td>
+        <%= f.hidden_field :building %>
+        <%= @estimate.building %>
+      </td>
+    </tr> 
+    <tr>
+      <th>TEL</th>
+      <td>
+        <%= f.hidden_field :tel %>
+        <%= @estimate.tel %>
+      </td>
+    </tr> 
+    <tr>
+      <th>FAX</th>
+      <td>
+        <%= f.hidden_field :fax %>
+        <%= @estimate.fax %>
+      </td>
+    </tr> 
+    <tr>
+      <th>Eメール</th>
+      <td>
+        <%= f.hidden_field :email %>
+        <%= @estimate.email %>
+      </td>
+    </tr> 
+    <tr>
+      <th>特記事項・必要要綱など</th>
+      <td>
+        <%= f.hidden_field :message %>
+        <%= simple_format(@estimate.message) %>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit '送信', :class => 'btn btn-primary' %>
+<% end %>

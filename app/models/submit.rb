@@ -1,6 +1,4 @@
-
-
-class Contact
+class Submit
   include ActiveModel::Model
  
   # attr_accessor :name, :email, :message

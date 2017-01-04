@@ -16,6 +16,20 @@
       <section>
        <h3 class="subtitle">お見積もり依頼フォーム</h3>
        <p class="red h">（*）は必須項目となります。</p>
+       
+        <%= form_for @estimate, :url => estimate_confirm_path do |f| %>
+        <% if @estimate.erros.any? %>
+          <div class ="alert alert-danger" role="alert">
+           <stront>入力内容にエラーがあります</stront>
+           <ul>
+            <% @estimate.erros.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+           </ul>
+          </div>
+          <% end %>
+        
+       
 <form action="https://www.printhakase.com/estimate.html" method="post" enctype="multipart/form-data" id="EstimateForm"><input type="hidden" name="_mode" value="conf" />
 <table border="0" cellpadding="0" cellspacing="0" class="form">
  <tr>
@@ -118,160 +132,91 @@
  <tr>
   <th>お名前<span class="red">*</span></th>
   <td>
-   <input name="sirname" class="txt1" type="text"> <input name="firstname" class="txt1" type="text">
+    <%= f.text_field :sirname %>
+    <%= f.text_field :firstname %>
+   <!--<input name="sirname" class="txt1" type="text">-->
+   <!--<input name="firstname" class="txt1" type="text">-->
    
   </td>
  </tr>
  <tr>
   <th>フリガナ<span class="red">*</span></th>
+
   <td>
-   <input name="sirname_kana" class="txt1" type="text"> <input name="firstname_kana" class="txt1" type="text">
+    <%= f.text_field :sirname_kana %>
+    <%= f.text_field :firstname_kana %>
+   <!--<input name="sirname_kana" class="txt1" type="text"> <input name="firstname_kana" class="txt1" type="text">-->
    
   </td>
  </tr>
  <tr>
   <th>会社名・担当部署</th>
-  <td><input name="company" class="txt2" type="text"></td>
+    <td>
+    <%= f.text_field :company %>
+      </td>
  </tr>
  <tr>
   <th>郵便番号<span class="red">*</span></th>
   <td>
-   <input name="postcode1" class="postcode" type="text">-<input name="postcode2" class="postcode" type="text">
-   
-  </td>
+   <%= f.text_field :postcode1 %>-<%= f.text_field :postcode2 %>
+   <!--<input name="postcode1" class="postcode" type="text">-<input name="postcode2" class="postcode" type="text">-->
+   </td>
  </tr>
  <tr>
   <th>都道府県<span class="red">*</span></th>
   <td>
-   <select name="prefecture">
-    <option value="">選択してください</option>
-
-    <optgroup label="北海道">
-     <option value="北海道">北海道</option>
-    </optgroup>
-
-    <optgroup label="東北">
-     <option value="青森県">青森県</option>
-     <option value="岩手県">岩手県</option>
-     <option value="宮城県">宮城県</option>
-     <option value="秋田県">秋田県</option>
-     <option value="山形県">山形県</option>
-     <option value="福島県">福島県</option>
-    </optgroup>
-
-    <optgroup label="関東">
-     <option value="東京都">東京都</option>
-     <option value="神奈川県">神奈川県</option>
-     <option value="埼玉県">埼玉県</option>
-     <option value="千葉県">千葉県</option>
-     <option value="茨城県">茨城県</option>
-     <option value="栃木県">栃木県</option>
-     <option value="群馬県">群馬県</option>
-    </optgroup>
-
-    <optgroup label="甲信越">
-     <option value="新潟県">新潟県</option>
-     <option value="長野県">長野県</option>
-     <option value="山梨県">山梨県</option>
-    </optgroup>
-
-    <optgroup label="北陸">
-     <option value="富山県">富山県</option>
-     <option value="石川県">石川県</option>
-     <option value="福井県">福井県</option>
-    </optgroup>
-
-    <optgroup label="東海">
-     <option value="愛知県">愛知県</option>
-     <option value="岐阜県">岐阜県</option>
-     <option value="静岡県">静岡県</option>
-     <option value="三重県">三重県</option>
-    </optgroup>
-
-    <optgroup label="関西">
-     <option value="大阪府">大阪府</option>
-     <option value="兵庫県">兵庫県</option>
-     <option value="京都府">京都府</option>
-     <option value="滋賀県">滋賀県</option>
-     <option value="奈良県">奈良県</option>
-     <option value="和歌山県">和歌山県</option>
-    </optgroup>
-
-    <optgroup label="中国">
-     <option value="鳥取県">鳥取県</option>
-     <option value="島根県">島根県</option>
-     <option value="岡山県">岡山県</option>
-     <option value="広島県">広島県</option>
-     <option value="山口県">山口県</option>
-    </optgroup>
-
-    <optgroup label="四国">
-     <option value="徳島県">徳島県</option>
-     <option value="香川県">香川県</option>
-     <option value="愛媛県">愛媛県</option>
-     <option value="高知県">高知県</option>
-    </optgroup>
-
-    <optgroup label="九州">
-     <option value="福岡県">福岡県</option>
-     <option value="佐賀県">佐賀県</option>
-     <option value="長崎県">長崎県</option>
-     <option value="熊本県">熊本県</option>
-     <option value="大分県">大分県</option>
-     <option value="宮崎県">宮崎県</option>
-     <option value="鹿児島県">鹿児島県</option>
-    </optgroup>
-
-    <optgroup label="沖縄">
-    <option value="沖縄県">沖縄県</option>
-    </optgroup>
-   </select>
-   
+    <%= f.select :prefecture, grouped_options_for_select(Prefecture::SELECT_OPTIONS),  :prompt => "選択してください" %>
+  
   </td>
  </tr>
  <tr>
   <th>市区町村<span class="red">*</span></th>
   <td>
-   <input name="city" class="txt2" type="text">
-   
+   <!--<input name="city" class="txt2" type="text">-->
+   <%= f.text_field :city %>
   </td>
  </tr>
  <tr>
   <th>町名・番地<span class="red">*</span></th>
   <td>
-   <input name="town" class="txt2" type="text">
-   
+   <!--<input name="town" class="txt2" type="text">-->
+   <%= f.text_field :town %>
   </td>
  </tr>
  <tr>
   <th>建物名</th>
-  <td><input name="building" class="txt2" type="text"></td>
+ <td>
+ <%= f.text_field :building %>
+ </td>
  </tr>
  <tr>
   <th>TEL<span class="red">*</span></th>
   <td>
-   <input name="tel" class="txt1" type="text">
-   
+   <!--<input name="tel" class="txt1" type="text">-->
+   <%= f.text_field :tel %>
   </td>
  </tr>
  <tr>
   <th>FAX</th>
-  <td><input name="fax" class="txt1" type="text"></td>
+   <td><%= f.text_field :fax %></td>
  </tr>
  <tr>
   <th>Eメール<span class="red">*</span></th>
   <td>
-   <input name="email" class="txt2" type="text">
+   <%= f.text_field :email %>
    
   </td>
  </tr>
  <tr>
   <th>特記事項・必要事項など</th>
-  <td><textarea name="message" wrap="hard"></textarea></td>
+  <td><textarea name="message" wrap="hard"></textarea>
+    <%= f.text_area :message %>
+    </td>
  </tr>
 </table>
-<div id="button-container"><input type="submit" class="confirm" value="内容確認"></div>
-
+<div id="button-container"><input type="submit" class="confirm" value="内容確認">
+ <%= f.submit 'submit', class: 'confirm'  %>
+ </div>
 </form>
 
       </section>
@@ -280,4 +225,4 @@
       <a href="#">↑ページの先頭へ戻る</a> 
      </div>
     </div>
-<!-- END MAIN -->
+<% end %>

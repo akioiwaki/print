@@ -1,0 +1,289 @@
+
+<!-- START MAIN -->
+    <div id="main">
+     <div id="breadcrumb-container">
+      <div id="breadcrumb">
+       <div id="breadcrumb-nav"><a href="/" title="HOME">HOME</a> &gt; お見積り依頼 </div>
+      </div>
+      <div id="userinfo">
+       
+      </div>
+     </div>
+     <article>
+            <h1 class="title-estimate">お見積り依頼</h1>
+      <p>下記フォームに必要事項を入力し、送信してください。<br>お客さまからいただいたご連絡先が間違っている場合や、システム障害などによりお返事できない場合がごく稀にございます。<br>万が一、資料が届かない場合は、お手数ですが、お電話またはFAXにてその旨をお問い合わせください。</p>
+
+      <section>
+       <h3 class="subtitle">お見積もり依頼フォーム</h3>
+       <p class="red h">（*）は必須項目となります。</p>
+        
+      <%= form_for @estimate, :url => estimate_confirm_path do |f| %>     
+        <% if @estimate.errors.any? %>
+            <strong>入力内容にエラーがあります</strong>
+            <ul>
+              <% @estimate.errors.each do |attr, msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+        <% end %>
+        
+       
+<!--<form action="https://www.printhakase.com/estimate.html" method="post" enctype="multipart/form-data" id="EstimateForm"><input type="hidden" name="_mode" value="conf" />-->
+<table border="0" cellpadding="0" cellspacing="0" class="form">
+ <tr>
+  <th colspan="2" class="head"><strong>印刷物に関する情報を入力してください</strong></td>
+ </tr>
+ <tr>
+  <th>ご希望の印刷物<span class="red">*</span></th>
+  <td>
+    <p class="radio01"><%= f.radio_button :paper1, "名刺・カード" %> 
+    <%= f.label :paper1, "名刺・カード" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "伝票" %> 
+    <%= f.label :paper1, "伝票" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "ハガキ印刷" %> 
+    <%= f.label :paper1, "ハガキ印刷" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "封筒" %> 
+    <%= f.label :paper1, "封筒" %>
+    <p class="radio01"><%= f.radio_button :paper1, "チラシ・フライヤー" %> 
+    <%= f.label :paper1, "チラシ・フライヤー" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "ポスター" %> 
+    <%= f.label :paper1, "ポスター" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "会社案内等" %> 
+    <%= f.label :paper1, "会社案内等" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "ユニフォーム各種" %> 
+    <%= f.label :paper1, "ユニフォーム各種" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "はんこ" %> 
+    <%= f.label :paper1, "はんこ" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "ノベルティ関連" %> 
+    <%= f.label :paper1, "ノベルティ関連" %></p>
+    <p class="radio01"><%= f.radio_button :paper1, "その他印刷" %> 
+    <%= f.label :paper1, "その他印刷" %></p><br class="clear">
+    <p class="radio1">その他印刷を選択した方は下記にご記入ください。</p>
+    <%= f.text_field :paper %>
+
+   <!--<p class="radio01"><label for="card"><input type="radio" name="paper1" value="名刺・カード" id="card" checked />名刺・カード</label></p>-->
+   <!--<p class="radio01"><label for="slip"><input type="radio" name="paper1" value="伝票" id="slip" />伝票</label></p>-->
+   <!--<p class="radio01"><label for="postcard"><input type="radio" name="paper1" value="ハガキ印刷" id="postcard" />ハガキ印刷</label></p>-->
+   <!--<p class="radio01"><label for="envelope"><input type="radio" name="paper1" value="封筒" id="envelope" />封筒</label></p>-->
+   <!--<p class="radio01"><label for="flier"><input type="radio" name="paper1" value="チラシ・フライヤー" id="flier" />チラシ・フライヤー</label></p>-->
+   <!--<p class="radio01"><label for="poster"><input type="radio" name="paper1" value="ポスター" id="poster" />ポスター</label></p>-->
+   <!--<p class="radio01"><label for="booklet"><input type="radio" name="paper1" value="会社案内等" id="booklet" />会社案内等</label></p>-->
+   <!--<p class="radio01"><label for="uniform"><input type="radio" name="paper1" value="ユニフォーム各種" id="uniform" />ユニフォーム各種</label></p>-->
+   <!--<p class="radio01"><label for="stamp"><input type="radio" name="paper1" value="はんこ" id="stamp" />はんこ</label></p>-->
+   <!--<p class="radio01"><label for="novelty"><input type="radio" name="paper1" value="ノベルティ関連" id="novelty" />ノベルティ関連</label></p>-->
+   <!--<p class="radio01"><label for="other"><input type="radio" name="paper1" value="その他印刷" id="other" />その他印刷</label></p><br class="clear">-->
+   <!--<p class="ex">その他印刷を選択した方は下記にご記入ください。</p>-->
+   <!--<input type="text" name="paper2" class="long">-->
+   
+  </td>
+ </tr>
+ <tr>
+  <th>型番</th>
+  <td>
+    <%= f.text_field :type %>
+    <!--<input type="text" name="type" class="short"></td>-->
+ </tr>
+ <tr>
+  <th rowspan="2">刷り色数<span class="red">*</span></th>
+  <td>
+   <p class="radio02"> <%= f.label :color1, "表面：4色 = フルカラー　0色 = 印刷なし" %></p>
+   <p class="radio02"><%= f.radio_button :color1, "4色" %> <%= f.label :color1, "4色" %></p>  
+   <p class="radio02"><%= f.radio_button :color1, "2色" %> <%= f.label :color1, "2色" %></p>
+   <p class="radio02"><%= f.radio_button :color1, "1色"  %> <%= f.label :color1, "1色" %></p>
+   <p class="radio02"><%= f.radio_button :color1, "0色" %> <%= f.label :color1, "0色" %></p>
+   <p class="radio02"><%= f.radio_button :color1, "紙媒体以外"%> <%= f.label :color1, "紙媒体以外" %></p>
+
+
+   
+   <!--<p>表面：&nbsp;<span class="gray">4色 = フルカラー　0色 = 印刷なし</span></p>-->
+   <!--<p class="radio02"><label for="4c"><input type="radio" name="color1" value="4色" id="4c" checked />4色</label></p>-->
+   <!--<p class="radio02"><label for="2c"><input type="radio" name="color1" value="2色" id="2c" />2色</label></p>-->
+   <!--<p class="radio02"><label for="1c"><input type="radio" name="color1" value="1色" id="1c" />1色</label></p>-->
+   <!--<p class="radio02"><label for="0c"><input type="radio" name="color1" value="0色" id="0c" />0色</label></p>-->
+   <!--<p class="radio01"><label for="otherc"><input type="radio" name="color1" value="紙媒体以外" id="otherc" />紙媒体以外</label></p>-->
+   
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <p class="radio02"> <%= f.label :color2, "裏面：4色 = フルカラー　0色 = 印刷なし" %></p>
+   <p class="radio02"><%= f.radio_button :color2, "4色" %> <%= f.label :color2, "4色" %></p>  
+   <p class="radio02"><%= f.radio_button :color2, "2色" %> <%= f.label :color2, "2色" %></p>
+   <p class="radio02"><%= f.radio_button :color2, "1色" %> <%= f.label :color2, "1色" %></p>
+   <p class="radio02"><%= f.radio_button :color2, "0色" %> <%= f.label :color2, "0色" %></p>
+   <p class="radio02"><%= f.radio_button :color2, "紙媒体以外" %> <%= f.label :color2, "紙媒体以外" %></p>
+
+   
+   <!--<p>裏面：&nbsp;<span class="gray">4色 = フルカラー　0色 = 印刷なし</span>-->
+   <!--<p class="radio02"><label for="4cb"><input type="radio" name="color2" value="4色" id="4cb" checked />4色</label></p>-->
+   <!--<p class="radio02"><label for="2cb"><input type="radio" name="color2" value="2色" id="2cb" />2色</label></p>-->
+   <!--<p class="radio02"><label for="1cb"><input type="radio" name="color2" value="1色" id="1cb" />1色</label></p>-->
+   <!--<p class="radio02"><label for="0cb"><input type="radio" name="color2" value="0色" id="0cb" />0色</label></p>-->
+   <!--<p class="radio01"><label for="othercb"><input type="radio" name="color2" value="紙媒体以外" id="othercb" />紙媒体以外</label></p>-->
+   
+  </td>
+ </tr>
+ <tr>
+  <th>用紙サイズ<span class="red">*</span><br />複数サイズでの見積可</th>
+  <td>
+        <p class="radio02"> <%= f.radio_button :size, "名刺サイズ" %> <%= f.label :size, "名刺サイズ" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "官製はがき" %> <%= f.label :size, "官製はがき" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "名刺サイズ" %> <%= f.label :size, "名刺サイズ" %></p><br class="clear">
+        
+        <p class="radio02"> <%= f.radio_button :size, "A4" %> <%= f.label :size, "A4" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "A3" %> <%= f.label :size, "A3" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "A2" %> <%= f.label :size, "A2" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "A1" %> <%= f.label :size, "A1" %></p><br class="clear">
+        
+        <p class="radio02"> <%= f.radio_button :size, "B5" %> <%= f.label :size, "B5" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "B4" %> <%= f.label :size, "B4" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "B3" %> <%= f.label :size, "B3" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "B2" %> <%= f.label :size, "B2" %></p>
+        <p class="radio02"> <%= f.radio_button :size, "B1" %> <%= f.label :size, "B1" %></p><br class="clear">
+        
+        <p class="radio02"> <%= f.radio_button :size0, "指定サイズ" %> <%= f.label :size0, "指定サイズ" %></p>
+        <p><%= f.text_field :size01 %> mm × <%= f.text_field :size02 %> mm</p><br class="clear">
+         
+        <p class="radio02"> <%= f.radio_button :size, "紙媒体以外" %> <%= f.label :size, "紙媒体以外" %>
+        
+       
+       
+        
+        
+   <!--<p class="radio01"><label for="cardsize"><input type="checkbox" name="size[]" value="名刺サイズ " id="cardsize" />名刺サイズ</label></p>-->
+   <!--<p class="radio01"><label for="postcardsize"><input type="checkbox" name="size[]" value="官製はがき " id="postcardsize" />官製はがき</label></p><br class="clear" />-->
+   <!--<p class="radio02"><label for="A4"><input type="checkbox" name="size[]" value="A4 " id="A4" />A4</label></p>-->
+   <!--<p class="radio02"><label for="A3"><input type="checkbox" name="size[]" value="A3 " id="A3" />A3</label></p>-->
+   <!--<p class="radio02"><label for="A2"><input type="checkbox" name="size[]" value="A2 " id="A2" />A2</label></p>-->
+   <!--<p class="radio02"><label for="A1"><input type="checkbox" name="size[]" value="A1 " id="A1" />A1</label></p><br class="clear">-->
+   <!--<p class="radio02"><label for="B5"><input type="checkbox" name="size[]" value="B5 " id="B5" />B5</label></p>-->
+   <!--<p class="radio02"><label for="B4"><input type="checkbox" name="size[]" value="B4 " id="B4" />B4</label></p>-->
+   <!--<p class="radio02"><label for="B3"><input type="checkbox" name="size[]" value="B3 " id="B3" />B3</label></p>-->
+   <!--<p class="radio02"><label for="B2"><input type="checkbox" name="size[]" value="B2 " id="B2" />B2</label></p>-->
+   <!--<p class="radio02"><label for="B1"><input type="checkbox" name="size[]" value="B1 " id="B1" />B1</label></p><br class="clear">-->
+   <!--<p><label for="specific"><input type="checkbox" name="size[]" value="指定サイズ" id="specific" />指定サイズ</label>-->
+   <!--<input type="text" name="size1" class="veryshort" /> mm × <input type="text" name="size2" class="veryshort" /> mm<br class="clear">-->
+   <!--<label for="othersize"><input type="checkbox" name="size[]" value="紙媒体以外 " id="othersize" />紙媒体以外</label>-->
+   
+  </td>
+ </tr>
+ <tr>
+  <th>必要数<span class="red">*</span></th>
+  <td>
+      <%= f.check_box(:amount,{:multiple=>true},'指定サイズ',nil) %>
+        <%= label_tag :amount,'' %>
+        <%= f.text_field :amount %><br />記入例）1,000部、1,000枚など
+   <!--<input type="text" name="amount" class="short"><br />記入例）1,000部、1,000枚など-->
+  </td>
+ </tr>
+ <tr>
+  <th>希望納品日<span class="red">*</span></th>
+  <td>
+    <%= f.check_box(:deliver,{:multiple=>true},'指定サイズ',nil) %>
+        <%= label_tag :deliver,'' %>
+        <%= f.text_field :deliver %><br />記入例）2017年01月01日、1週間以内など
+  </td>
+ </tr>
+ <tr>
+  <th>添付ファイル01<br />参考見本資料等</th>
+  <td>
+     <%= f.file_field :attachment %>
+   <input type="file" name="file1" class="middle" /><br>
+  <span class="red">※アップロードするファイルのファイル名は、すべて半角英数字でお願い致します。<br>※一度にアップロードできるのは50MBまでです。（複数個の場合、その合計）</span></td>
+ </tr>
+ <tr>
+  <th>添付ファイル02<br />参考見本資料等</th>
+  <td><input type="file" name="file2" class="middle" /></td>
+ </tr>
+ <tr>
+  <th>添付ファイル03<br />参考見本資料等</th>
+  <td><input type="file" name="file3" class="middle" /></td>
+ </tr>
+ <tr>
+  <th colspan="2" class="head"><strong>お客様情報を入力してください</strong></td>
+ </tr>
+ <tr>
+  <th>お名前<span class="red">*</span></th>
+  <td>
+    <%= f.text_field :sirname %>
+    <%= f.text_field :firstname %>
+  </td>
+ </tr>
+ <tr>
+  <th>フリガナ<span class="red">*</span></th>
+  <td>
+    <%= f.text_field :sirname_kana %>
+    <%= f.text_field :firstname_kana %>
+  </td>
+ </tr>
+ <tr>
+  <th>会社名・担当部署</th>
+    <td>
+    <%= f.text_field :company %>
+    </td>
+ </tr>
+ <tr>
+  <th>郵便番号<span class="red">*</span></th>
+  <td>
+   <%= f.text_field :postcode1 %>-<%= f.text_field :postcode2 %>
+ </tr>
+ <tr>
+  <th>都道府県<span class="red">*</span></th>
+  <td>
+    <%= f.select :prefecture, grouped_options_for_select(Prefecture::SELECT_OPTIONS),  :prompt => "選択してください" %>
+  
+  </td>
+ </tr>
+ <tr>
+  <th>市区町村<span class="red">*</span></th>
+  <td>
+   <%= f.text_field :city %>
+  </td>
+ </tr>
+ <tr>
+  <th>町名・番地<span class="red">*</span></th>
+  <td>
+   <%= f.text_field :town %>
+  </td>
+ </tr>
+ <tr>
+  <th>建物名</th>
+ <td>
+ <%= f.text_field :building %>
+ </td>
+ </tr>
+ <tr>
+  <th>TEL<span class="red">*</span></th>
+  <td>
+   <%= f.text_field :tel %>
+  </td>
+ </tr>
+ <tr>
+  <th>FAX</th>
+   <td><%= f.text_field :fax %></td>
+ </tr>
+ <tr>
+  <th>Eメール<span class="red">*</span></th>
+  <td>
+   <%= f.text_field :email %>
+  </td>
+ </tr>
+ <tr>
+  <th>特記事項・必要事項など</th>
+  <td><%= f.text_area :message %></textarea>
+
+    </td>
+ </tr>
+</table>
+ <div id="button-container">
+  <%= f.submit 'submit', class: 'confirm'  %>
+ </div>
+</form>
+
+      </section>
+     </article>
+     <div id="pagetop"> 
+      <a href="#">↑ページの先頭へ戻る</a> 
+     </div>
+    </div>
+<% end %>

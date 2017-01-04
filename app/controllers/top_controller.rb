@@ -16,9 +16,6 @@ class TopController < ApplicationController
   def sitemap
   end
   
-  def estimate
-  end
-  
   def price
   end
   

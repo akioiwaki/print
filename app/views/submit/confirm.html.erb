@@ -2,100 +2,101 @@
   <h1>お問い合わせ</h1>
 </div>
  
-<%= form_for @contact, :url => contact_thanks_path do |f| %>
+<%= form_for @submit, :url =>submit_thanks_path do |f| %>
   <table class="table">
     <tr>
       <th>名前</th>
       <td>
         <%= f.hidden_field :sirname %>
-        <%= @contact.sirname %>
+        <%= @submit.sirname %>
         <%= f.hidden_field :firstname %>
-        <%= @contact.firstname %>
+        <%= @submit.firstname %>
       </td>
     </tr>
-      <th>名前</th>
+      <th>フリガナ</th>
       <td>
         <%= f.hidden_field :sirname_kana %>
-        <%= @contact.sirname %>
+        <%= @submit.sirname_kana %>
         <%= f.hidden_field :firstname_kana %>
-        <%= @contact.firstname %>
+        <%= @submit.firstname_kana %>
       </td>
     </tr>
      <tr>
       <th>会社名・担当部署</th>
       <td>
         <%= f.hidden_field :company %>
-        <%= @contact.company %>
+        <%= @submit.company %>
       </td>
     </tr> <tr>
       <th>郵便番号</th>
       <td>
         <%= f.hidden_field :postcode1 %>
-        <%= @contact.postcode1 %>
+        <%= @submit.postcode1 %>-
         <%= f.hidden_field :postcode2 %>
-        <%= @contact.postcode2 %>
+        <%= @submit.postcode2 %>
       </td>
     </tr> <tr>
       <th>都道府県</th>
       <td>
-        <%= f.hidden_field :prefecture %>
-        <%= @contact.prefecture %>
+        <li><%= @submit.prefecture %><%= f.hidden_field :prefecture %></li>
+      
       </td>
     </tr> <tr>
       <th>市区町村</th>
       <td>
         <%= f.hidden_field :city %>
-        <%= @contact.city %>
+        <%= @submit.city %>
       </td>
     </tr> <tr>
       <th>町名・番地</th>
       <td>
         <%= f.hidden_field :town %>
-        <%= @contact.ntowname %>
+        <%= @submit.town %>
       </td>
     </tr> <tr>
       <th>建物名</th>
       <td>
         <%= f.hidden_field :building %>
-        <%= @contact.building %>
+        <%= @submit.building %>
       </td>
     </tr> <tr>
       <th>TEL</th>
       <td>
         <%= f.hidden_field :tel %>
-        <%= @contact.tel %>
+        <%= @submit.tel %>
       </td>
     </tr> <tr>
       <th>FAX</th>
       <td>
         <%= f.hidden_field :fax %>
-        <%= @contact.fax %>
+        <%= @submit.fax %>
       </td>
     </tr> <tr>
       <th>Eメール</th>
       <td>
         <%= f.hidden_field :email %>
-        <%= @contact.email %>
+        <%= @submit.email %>
       </td>
     </tr> <tr>
       <th>ご希望の連絡方法</th>
       <td>
         <%= f.hidden_field :check %>
-        <%= @contact.check %>
+        <%= @submit.check .join(", ") %>
+
       </td>
     </tr>
     <tr>
       <th>お問い合わせ種別</th>
       <td>
-        <%= f.hidden_field :prefecture %>
-        <%= simple_format(@contact.prefecture) %>
+        <%= f.hidden_field :subject %>
+        <%= simple_format(@submit.subject) %>
       </td>
     </tr>
     <tr>
       <th>お問い合わせ内容</th>
       <td>
         <%= f.hidden_field :message %>
-        <%= simple_format(@contact.message) %>
+        <%= simple_format(@submit.message) %>
       </td>
     </tr>
   </table>
