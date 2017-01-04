@@ -5,7 +5,7 @@
 <%= form_for @submit, :url =>submit_thanks_path do |f| %>
   <table class="table">
     <tr>
-      <th>お名前</th>
+      <th>名前</th>
       <td>
         <%= f.hidden_field :sirname %>
         <%= @submit.sirname %>
@@ -86,22 +86,14 @@
       </td>
     </tr>
     <tr>
-      <th>ファイル１</th>
+      <th>お問い合わせ種別</th>
       <td>
-      </td>
-    </tr>
-　　<tr>
-      <th>ファイル2</th>
-      <td>
-      </td>
-    </tr>
-　　<tr>
-      <th>ファイル3</th>
-      <td>
+        <%= f.hidden_field :subject %>
+        <%= simple_format(@submit.subject) %>
       </td>
     </tr>
     <tr>
-      <th>特記事項・必要事項など</th>
+      <th>お問い合わせ内容</th>
       <td>
         <%= f.hidden_field :message %>
         <%= simple_format(@submit.message) %>

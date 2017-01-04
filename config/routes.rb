@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   
   get 'submit' => 'submit#index'
   post 'submit/confirm' => 'submit#confirm' #確認画面
-  post 'submit/thanks' => 'subumit#thanks' #送信完了画面
+  post 'submit/thanks' => 'submit#thanks' #送信完了画面
   
   
   get 'guide' => 'guide#index'
