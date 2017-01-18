@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -31,6 +31,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+
+gem 'activeadmin', github: 'gregbell/active_admin' #ActiveAdminを追加
+gem 'devise' # ユーザー認証
+gem 'inherited_resources', github: 'activeadmin/inherited_resources' #Action packエラー対応
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
