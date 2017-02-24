@@ -95,6 +95,14 @@ Rails.application.routes.draw do
   get 'homepage_' => 'promotion#homepage_'
   get 'mobile' => 'promotion#mobile'
   
+  get 'member' => 'member#index'
+  get 'member/etc'=> 'member#etc'
+  get 'login' => 'login#index'
+  
+  
+  get 'admin' => 'admin#index'
+  
+  
 
   # For details on the DSL available within this file, see http:' => '' => 'guides.rubyonrails.org' => 'routing.html
 end
